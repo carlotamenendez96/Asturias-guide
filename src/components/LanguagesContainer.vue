@@ -27,7 +27,6 @@ const router = useIonRouter();
 const handleLanguageChange = async (lang: string) => {
   // Primero cambiamos el idioma
   locale.value = lang;
-  console.log('idioma cambiado: ', locale.value);
   
   // Navegamos usando el IonRouter
   router.navigate('/tabs/all-options', 'forward');

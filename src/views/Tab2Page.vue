@@ -1,5 +1,5 @@
 <template>
-  <base-layout>
+  <base-layout :showBackButton="false">
     <ion-content :fullscreen="true">
       <ion-header collapse="condense">
         <ion-toolbar>
