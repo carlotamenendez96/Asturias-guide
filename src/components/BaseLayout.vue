@@ -4,7 +4,7 @@
     <ion-header>
       <ion-toolbar>
         <ion-buttons v-if="showBackButton" slot="start">
-          <ion-back-button default-href="/tabs/tab1"></ion-back-button>
+          <ion-back-button default-href="/tab1"></ion-back-button>
         </ion-buttons>
         <ion-title>Asturias Guide</ion-title>
       </ion-toolbar>

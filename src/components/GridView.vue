@@ -38,6 +38,7 @@
 import { ref, onMounted } from 'vue';
 import { IonContent, IonCard } from '@ionic/vue';
 import BaseLayout from '@/components/BaseLayout.vue';
+import { useNavigationManager } from '@/utils/navigationManager';
 import { useRouter } from 'vue-router';
 
 interface GridItem {
@@ -53,6 +54,7 @@ const props = defineProps<{
 
 const router = useRouter();
 const loadedImages = ref<boolean[]>(new Array(props.items.length).fill(false));
+const { goBack } = useNavigationManager();
 
 const imageLoaded = (index: number) => {
   loadedImages.value[index] = true;
@@ -60,10 +62,6 @@ const imageLoaded = (index: number) => {
 
 const navigateTo = (route: string) => {
   router.push(route);
-};
-
-const goBack = () => {
-  router.go(-1);
 };
 
 onMounted(() => {
@@ -79,6 +77,9 @@ onMounted(() => {
 </script>
 
 <style scoped>
+.categories-container {
+  scroll-behavior: smooth;
+}
 .categories-container {
   display: flex;
   flex-direction: column;
