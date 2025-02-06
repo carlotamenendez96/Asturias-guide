@@ -30,7 +30,11 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: 'all-options',
         component: () => import('@/views/AllOptions.vue')
-      }
+      },
+      // {
+      //   path: '/miradores',
+      //   component: () => import('@/views/Miradores.vue')
+      // }
     ]
   }
 ]

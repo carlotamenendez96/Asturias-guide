@@ -1,127 +1,12 @@
 <template>
-  <base-layout :showBackButton="true">
-    <ion-content :fullscreen="true">
-      <div class="categories-container">
-        <ion-card
-          v-for="(category, index) in categories"
-          :key="index"
-          class="category-card"
-          @click="navigateTo(category.route)"
-          :ref="setCardRef"
-          :data-index="index"
-        >
-          <div 
-            class="category-placeholder"
-            :class="{ 'hidden': loadedImages[index] }"
-          ></div>
-          
-          <img
-            :src="category.image"
-            :alt="$t(category.title)"
-            class="category-image"
-            :class="{ 'loaded': loadedImages[index] }"
-            @load="imageLoaded(index)"
-            loading="lazy"
-            decoding="async"
-          />
-          
-          <div class="category-title">
-            <h2>{{ $t(category.title) }}</h2>
-          </div>
-        </ion-card>
-      </div>
-    </ion-content>
-  </base-layout>
+  <grid-view :items="categories" />
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue';
-import { IonContent, IonCard } from '@ionic/vue';
-import BaseLayout from '@/components/BaseLayout.vue';
-import { useRouter } from 'vue-router';
+import GridView from '@/components/GridView.vue';
 
-interface Category {
-  title: string;
-  image: string;
-  route: string;
-}
 
-const router = useRouter();
-const loadedImages = ref<boolean[]>(new Array(12).fill(false));
-const cardRefs = ref<(HTMLElement | null)[]>([]);
-
-const setCardRef = (el: HTMLElement | null, index: number) => {
-  if (el) {
-    cardRefs.value[index] = el;
-  }
-};
-
-const preloadInitialImages = () => {
-  categories.slice(0, 4).forEach((category, index) => {
-    const img = new Image();
-    img.src = category.image;
-    img.onload = () => {
-      loadedImages.value[index] = true;
-    };
-  });
-};
-
-const imageLoaded = (index: number) => {
-  loadedImages.value[index] = true;
-};
-
-const setupIntersectionObserver = () => {
-  const options: IntersectionObserverInit = {
-    root: null,
-    rootMargin: '50px 0px',
-    threshold: 0.1
-  };
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const index = parseInt(entry.target.getAttribute('data-index') || '0');
-        if (!loadedImages.value[index]) {
-          const img = new Image();
-          img.src = categories[index].image;
-          img.onload = () => {
-            loadedImages.value[index] = true;
-          };
-        }
-      }
-    });
-  }, options);
-
-  // Solo observar elementos que existen
-  cardRefs.value.forEach(card => {
-    if (card instanceof HTMLElement) {
-      observer.observe(card);
-    }
-  });
-
-  return observer;
-};
-
-let observer: IntersectionObserver;
-
-onMounted(() => {
-  // Asegurarnos de que cardRefs esté inicializado con el número correcto de elementos
-  cardRefs.value = new Array(categories.length).fill(null);
-  preloadInitialImages();
-  
-  // Dar tiempo a que los refs se establezcan
-  setTimeout(() => {
-    observer = setupIntersectionObserver();
-  }, 100);
-});
-
-onUnmounted(() => {
-  if (observer) {
-    observer.disconnect();
-  }
-});
-
-const categories: Category[] = [
+const categories = [
   {
     title: 'Home.categories.municipal',
     image: '/src/assets/img/municipal.jpg',
@@ -184,9 +69,6 @@ const categories: Category[] = [
   }
 ];
 
-const navigateTo = (route: string) => {
-  router.push(route);
-};
 </script>
 
 <style scoped>
