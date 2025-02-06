@@ -29,7 +29,7 @@ const handleLanguageChange = async (lang: string) => {
   locale.value = lang;
   
   // Navegamos usando el IonRouter
-  router.navigate('/all-options', 'forward');
+  router.navigate('/tabs/all-options', 'forward');
 };
 </script>
 

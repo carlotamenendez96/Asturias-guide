@@ -2,32 +2,19 @@ import { createRouter, createWebHistory } from '@ionic/vue-router';
 import { RouteRecordRaw } from 'vue-router';
 import TabsPage from '../views/TabsPage.vue';
 
-// Definir los tipos de categorías disponibles
-type CategoryType = 'miradores' | 'playas' | 'museos';
-
-// Función helper para crear rutas de categoría
-const createCategoryRoutes = (category: CategoryType): RouteRecordRaw[] => [
-  {
-    path: category,
-    component: () => import('@/views/CategoryList.vue'),
-    props: { categoryType: category }
-  },
-  {
-    path: `${category}/:id`,
-    component: () => import('@/views/CategoryDetail.vue'),
-    props: true
-  }
-];
-
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    redirect: '/tab1'
+    redirect: '/tabs/tab1'
   },
   {
-    path: '/',
+    path: '/tabs/',
     component: TabsPage,
     children: [
+      {
+        path: '',
+        redirect: '/tabs/tab1'
+      },
       {
         path: 'tab1',
         component: () => import('@/views/Tab1Page.vue')
@@ -42,18 +29,41 @@ const routes: Array<RouteRecordRaw> = [
       },
       {
         path: 'all-options',
-        component: () => import('@/views/AllOptionsLayout.vue'),
-        children: [
-          {
-            path: '',
-            component: () => import('@/views/CategoryList.vue'),
-            props: { categoryType: 'all' }
-          },
-          ...createCategoryRoutes('miradores'),
-          ...createCategoryRoutes('playas'),
-          ...createCategoryRoutes('museos')
-        ]
+        component: () => import('@/views/CategoryList.vue'),
+        props: { categoryType: 'all' }
+      },
+      // Rutas de categorías dentro de tabs
+      {
+        path: 'miradores',
+        component: () => import('@/views/CategoryList.vue'),
+        props: { categoryType: 'miradores' }
+      },
+      {
+        path: 'miradores/:id',
+        component: () => import('@/views/CategoryDetail.vue'),
+        props: true
+      },
+      {
+        path: 'playas',
+        component: () => import('@/views/CategoryList.vue'),
+        props: { categoryType: 'playas' }
+      },
+      {
+        path: 'playas/:id',
+        component: () => import('@/views/CategoryDetail.vue'),
+        props: true
+      },
+      {
+        path: 'museos',
+        component: () => import('@/views/CategoryList.vue'),
+        props: { categoryType: 'museos' }
+      },
+      {
+        path: 'museos/:id',
+        component: () => import('@/views/CategoryDetail.vue'),
+        props: true
       }
+      // Añadir más rutas de categorías aquí...
     ]
   }
 ];
