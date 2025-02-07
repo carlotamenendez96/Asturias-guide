@@ -10,7 +10,7 @@ export default {
     "arqueological": "YACIMIENTOS ARQUEOLÓGICOS",
     "markets": "MERCADILLOS",
     "recreational": "ÁREAS RECREATIVAS",
-    "campings": "ZONA DE CAMPINGS",
+    "camping": "ZONA DE CAMPINGS",
     "museums": "MUSEOS",
     "turism": "OFICINAS DE TURISMO",
   }

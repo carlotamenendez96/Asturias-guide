@@ -1,18 +1,13 @@
-import {GridItem} from "@/types/index";
-export const beaches: GridItem[] =  [
+import { GridItem } from "@/types";
+export const beaches: GridItem[] = [
   {
-    title: 'Home.categories.beaches',
-    image: '/src/assets/img/playas.jpg',
-    route: '/playas'
-  },
-  {
-    title: 'Home.categories.viewpoints',
-    image: '/src/assets/img/miradores.jpg',
-    route: '/miradores'
-  },
-  {
-    title: 'Home.categories.museums',
-    image: '/src/assets/img/museos.jpg',
-    route: '/museos'
+    title: 'Beaches.playa-del-silencio.title',
+    image: '/src/assets/img/playas/playadelsilencio.webp',
+    route: '/beaches/playa-del-silencio',
+    sections: [
+      'parking',
+      'access', 
+      'services'
+    ]
   }
-]
+ ];

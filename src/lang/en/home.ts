@@ -10,7 +10,7 @@ export default {
     "arqueological": "ARQUEOLOGICAL SITES",
     "markets": "MARKETS",
     "recreational": "RECREATIONAL AREAS",
-    "campings": " CAMPINGS AREA",
+    "camping": " CAMPINGS AREA",
     "museums": "MUSEUMS",
     "turism": "TOURIST OFFICES",
   }

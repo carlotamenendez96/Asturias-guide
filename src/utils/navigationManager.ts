@@ -20,7 +20,7 @@ export function useNavigationManager() {
       ionRouter.back();
     } else {
       // Si no hay historial, volvemos a una ruta por defecto
-      router.push('/tab1');
+      router.push('/tabs/tab1');
     }
   };
 

@@ -34,32 +34,32 @@ const routes: Array<RouteRecordRaw> = [
       },
       // Rutas de categorías dentro de tabs
       {
-        path: 'miradores',
+        path: '/miradores',
         component: () => import('@/views/CategoryList.vue'),
         props: { categoryType: 'miradores' }
       },
       {
-        path: 'miradores/:id',
+        path: '/miradores/:id',
         component: () => import('@/views/CategoryDetail.vue'),
         props: true
       },
       {
-        path: 'playas',
+        path: '/beaches',
         component: () => import('@/views/CategoryList.vue'),
-        props: { categoryType: 'playas' }
+        props: { categoryType: 'beaches' }
       },
       {
-        path: 'playas/:id',
+        path: '/beaches/:id',
         component: () => import('@/views/CategoryDetail.vue'),
         props: true
       },
       {
-        path: 'museos',
+        path: '/museos',
         component: () => import('@/views/CategoryList.vue'),
         props: { categoryType: 'museos' }
       },
       {
-        path: 'museos/:id',
+        path: '/museos/:id',
         component: () => import('@/views/CategoryDetail.vue'),
         props: true
       }

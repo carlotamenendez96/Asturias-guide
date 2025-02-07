@@ -10,7 +10,7 @@ export default {
     "arqueological": "SITI ARCHEOLOGICI",
     "markets": "MERCATI",
     "recreational": "AREE RICREATIVE",
-    "campings": "ZONE CAMPEGGIO",
+    "camping": "ZONE CAMPEGGIO",
     "museums": "MUSEI",
     "turism": "UFFICI TURISTICI",
   }

@@ -1,7 +1,9 @@
 export interface GridItem {
   title: string;
-  image: string;
+  image: string; 
   route: string;
+  sections?: string[];
 }
 
-export type CategoryType = 'miradores' | 'playas' | 'museos';
+
+export type CategoryType = 'miradores' | 'beaches' | 'museos';

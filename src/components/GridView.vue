@@ -65,18 +65,20 @@ const navigateTo = (route: string) => {
 };
 
 onMounted(() => {
-  // Precargar las dos primeras imágenes
-  props.items.slice(0, 2).forEach((item, index) => {
-    const img = new Image();
-    img.src = item.image;
-    img.onload = () => {
-      loadedImages.value[index] = true;
-    };
+  const preloadImages = props.items.slice(0, 2);
+  preloadImages.forEach((item, index) => {
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.as = 'image';
+    link.href = item.image;
+    link.fetchPriority = 'high';
+    document.head.appendChild(link);
   });
 });
 </script>
 
 <style scoped>
+
 .categories-container {
   scroll-behavior: smooth;
 }
@@ -89,6 +91,8 @@ onMounted(() => {
 }
 
 .category-card {
+  transform: translateZ(0);
+  will-change: transform;
   height: 280px;
   margin: 0;
   border-radius: 0;
@@ -116,6 +120,9 @@ onMounted(() => {
 }
 
 .category-image {
+  aspect-ratio: 16/9;
+  will-change: opacity;
+  transform: translateZ(0);
   position: absolute;
   top: 0;
   left: 0;

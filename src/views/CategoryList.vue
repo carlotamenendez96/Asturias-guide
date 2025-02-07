@@ -40,7 +40,7 @@
   const categoryMap: { [key: string]: GridItem[] } = {
     'all': categories,
     'miradores': viewpoints,
-    'playas': beaches,
+    'beaches': beaches,
     'museos': museums,
   };
   
@@ -52,7 +52,7 @@
     const titles: { [key in typeof props.categoryType]: string } = {
       'all': 'Todas las Categorías',
       'miradores': 'Miradores',
-      'playas': 'Playas',
+      'beaches': 'Beaches',
       'museos': 'Museos',
     };
     return titles[props.categoryType] || '';

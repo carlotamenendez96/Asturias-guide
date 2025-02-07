@@ -14,6 +14,6 @@ import LanguagesContainer from '@/components/LanguagesContainer.vue';
 
 <style scoped>
 .ion-content-bg {
-  --background: url('/src/assets/img/principal.jpg') no-repeat center center / cover;
+  --background: url('/src/assets/img/principal.webp') no-repeat center center / cover;
 }
 </style>
