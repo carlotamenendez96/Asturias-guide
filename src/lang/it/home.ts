@@ -1,5 +1,6 @@
 export default {
   "welcome": "Benvenuto in Asturias Guide",
+  "no_favorite": "Nessun preferito salvato",
   "categories": {
     "municipal": "GUIDA MUNICIPALE",
     "accommodations": "ALLOGGI",

@@ -1,17 +1,25 @@
+//CategoryDetail.vue
 <template>
   <ion-page>
-    <!-- <ion-header>
-      <ion-toolbar>
-        <ion-buttons slot="start">
-          <ion-back-button :default-href="defaultBackLink" text=""></ion-back-button>
-        </ion-buttons>
-        <ion-title>{{ item ? $t(item.title) : '' }}</ion-title>
-      </ion-toolbar>
-    </ion-header> -->
     <base-layout :showBackButton="true" @back="goBack">
       <ion-content :fullscreen="true">
         <div class="category-detail" v-if="item">
-          <img :src="item.image" :alt="$t(item.title)" class="detail-image"/>
+          <div class="image-container">
+            <img :src="item.image" :alt="$t(item.title)" class="detail-image"/>
+            <!-- Botón de favoritos -->
+            <ion-button
+              class="favorite-button"
+              fill="clear"
+              @click="toggleFavorite(item)"
+            >
+              <ion-icon
+                :icon="isFavorite(item) ? heart : heartOutline"
+                :color="isFavorite(item) ? 'danger' : 'light'"
+                size="large"
+              ></ion-icon>
+            </ion-button>
+          </div>
+
           <div class="content-container">
             <div class="description">
               <h2>{{ $t(`${getItemId()}.title`) }}</h2>
@@ -28,8 +36,8 @@
     </base-layout>
   </ion-page>
 </template>
- 
- <script setup lang="ts">
+
+<script setup lang="ts">
 import { computed } from 'vue';
 import { useRoute } from 'vue-router';
 import {
@@ -39,10 +47,14 @@ import {
   IonTitle,
   IonContent,
   IonButtons,
-  IonBackButton
+  IonBackButton,
+  IonButton,
+  IonIcon
 } from '@ionic/vue';
+import { heart, heartOutline } from 'ionicons/icons';
 import { GridItem, CategoryType } from '@/types';
 import { useNavigationManager } from '@/utils/navigationManager';
+import { useFavoritesStore } from '@/stores/favorites';
 import { viewpoints } from '@/data/viewpoints';
 import { beaches } from '@/data/beaches';
 import { museums } from '@/data/museums';
@@ -63,6 +75,7 @@ const categoryDataMap: CategoryDataMapType = {
 };
 
 const { goBack } = useNavigationManager();
+const favoritesStore = useFavoritesStore();
 
 const getCategoryFromPath = (path: string): CategoryType | '' => {
   const matches = path.match(/\/([^/]+)/);
@@ -87,7 +100,7 @@ const item = computed(() => {
   }
   return undefined;
 });
- 
+
 const capitalizeFirstLetter = (string: string) => {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
@@ -96,36 +109,71 @@ const getItemId = () => {
   const capitalizedCategory = capitalizeFirstLetter(currentCategory);
   return `${capitalizedCategory}.${route.params.id}`;
 }
- </script>
- 
- <style scoped>
- .detail-image {
+
+const toggleFavorite = async (item: GridItem) => {
+  try {
+    if (favoritesStore.isFavorite(item)) {
+      await favoritesStore.removeFromFavorites(item);
+    } else {
+      await favoritesStore.addToFavorites(item);
+    }
+  } catch (error) {
+    console.error('Error al gestionar favoritos:', error);
+  }
+};
+
+const isFavorite = (item: GridItem) => {
+  return favoritesStore.isFavorite(item);
+};
+</script>
+
+<style scoped>
+.image-container {
+  position: relative;
+  width: 100%;
+}
+
+.detail-image {
   width: 100%;
   height: 300px;
   object-fit: cover;
- }
- 
- .content-container {
+}
+
+.favorite-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  --padding-start: 8px;
+  --padding-end: 8px;
+  --background: rgba(0, 0, 0, 0.3);
+  --border-radius: 50%;
+}
+
+.favorite-button:hover {
+  --background: rgba(0, 0, 0, 0.5);
+}
+
+.content-container {
   padding: 20px;
- }
- 
- .description {
+}
+
+.description {
   margin-bottom: 24px;
   line-height: 1.6;
- }
- 
- .section {
+}
+
+.section {
   margin-bottom: 20px;
- }
- 
- .section h2 {
+}
+
+.section h2 {
   font-size: 1.4em;
   margin-bottom: 12px;
   color: var(--ion-color-primary);
- }
- 
- .section p {
-  line-height: 1.5;
- }
- </style>
+}
 
+.section p {
+  line-height: 1.5;
+}
+</style>

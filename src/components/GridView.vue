@@ -1,4 +1,4 @@
-// GridView.vue
+//GridView.vue
 <template>
   <base-layout :showBackButton="true" @back="goBack">
     <ion-content :fullscreen="true">
@@ -9,7 +9,7 @@
           class="category-card"
           @click="navigateTo(item.route)"
         >
-          <div 
+          <div
             class="category-placeholder"
             :class="{ 'hidden': loadedImages[index] }"
           ></div>
@@ -25,6 +25,20 @@
             decoding="async"
           />
           
+          <!-- Botón de favoritos - solo se muestra si showFavoriteButton es true -->
+          <ion-button
+            v-if="showFavoriteButton"
+            class="favorite-button"
+            fill="clear"
+            @click.stop="toggleFavorite(item)"
+          >
+            <ion-icon
+              :icon="isFavorite(item) ? heart : heartOutline"
+              :color="isFavorite(item) ? 'danger' : 'light'"
+              size="large"
+            ></ion-icon>
+          </ion-button>
+
           <div class="category-title">
             <h2>{{ $t(item.title) }}</h2>
           </div>
@@ -36,25 +50,31 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
-import { IonContent, IonCard } from '@ionic/vue';
+import { IonContent, IonCard, IonButton, IonIcon, IonToast } from '@ionic/vue';
+import { heart, heartOutline } from 'ionicons/icons';
 import BaseLayout from '@/components/BaseLayout.vue';
 import { useNavigationManager } from '@/utils/navigationManager';
 import { useRouter } from 'vue-router';
+import { useFavoritesStore } from '@/stores/favorites';
 
 interface GridItem {
   title: string;
   image: string;
   route: string;
+  sections?: string[];
 }
 
-// Definir las props
 const props = defineProps<{
   items: GridItem[];
+  showFavoriteButton?: boolean; // Nueva prop para controlar la visibilidad del botón de favoritos
 }>();
 
 const router = useRouter();
 const loadedImages = ref<boolean[]>(new Array(props.items.length).fill(false));
 const { goBack } = useNavigationManager();
+const favoritesStore = useFavoritesStore();
+const showToast = ref(false);
+const toastMessage = ref('');
 
 const imageLoaded = (index: number) => {
   loadedImages.value[index] = true;
@@ -62,6 +82,27 @@ const imageLoaded = (index: number) => {
 
 const navigateTo = (route: string) => {
   router.push(route);
+};
+
+const toggleFavorite = async (item: GridItem) => {
+  try {
+    if (favoritesStore.isFavorite(item)) {
+      await favoritesStore.removeFromFavorites(item);
+      toastMessage.value = 'Eliminado de favoritos';
+    } else {
+      await favoritesStore.addToFavorites(item);
+      toastMessage.value = 'Añadido a favoritos';
+    }
+    showToast.value = true;
+  } catch (error) {
+    console.error('Error al gestionar favoritos:', error);
+    toastMessage.value = 'Error al gestionar favoritos';
+    showToast.value = true;
+  }
+};
+
+const isFavorite = (item: GridItem) => {
+  return favoritesStore.isFavorite(item);
 };
 
 onMounted(() => {
@@ -179,5 +220,20 @@ ion-card + ion-card {
 
 .category-card:active {
   transform: scale(0.98);
+}
+
+.favorite-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  --padding-start: 8px;
+  --padding-end: 8px;
+  --background: rgba(0, 0, 0, 0.3);
+  --border-radius: 50%;
+}
+
+.favorite-button:hover {
+  --background: rgba(0, 0, 0, 0.5);
 }
 </style>

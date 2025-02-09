@@ -1,5 +1,6 @@
 export default {
   "welcome": "Willkommen bei Asturias Guide",
+  "no_favorite": "Keine Favoriten gespeichert",
   "categories": {
     "municipal": "KOMMUNALE FÜHRUNG",
     "accommodations": "UNTERKÜNFTE",

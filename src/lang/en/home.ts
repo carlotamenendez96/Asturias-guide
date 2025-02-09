@@ -1,5 +1,6 @@
 export default {
   "welcome": "Welcome Asturias Guide",
+  "no_favorite": "No favorites saved",
   "categories": {
     "municipal": "MUNICIPAL GUIDE",
     "accommodations": "ACCOMMODATIONS",

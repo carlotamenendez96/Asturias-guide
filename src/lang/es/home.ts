@@ -1,5 +1,6 @@
 export default {
   "welcome": "Bienvenido a Asturias Guide",
+  "no_favorite": "No hay favoritos guardados",
   "categories": {
     "municipal": "GUÍA MUNICIPAL",
     "accommodations": "ALOJAMIENTOS",

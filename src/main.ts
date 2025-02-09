@@ -1,4 +1,5 @@
-import { createApp } from 'vue'
+import { createApp } from 'vue';
+import { createPinia } from 'pinia';
 import App from './App.vue'
 import router from './router';
 
@@ -53,12 +54,14 @@ const i18n = createI18n({
   },
   legacy: false,
   globalInjection: true
-})
+});
 
+const pinia = createPinia()
 
 const app = createApp(App)
   .use(IonicVue)
   .use(router)
+  .use(pinia) 
   .use(i18n);
 
 app.component('base-layout', BaseLayout);

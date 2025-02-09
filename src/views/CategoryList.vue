@@ -10,7 +10,7 @@
       </ion-header> -->
       
       <ion-content>
-        <GridView :items="categoryItems" />
+        <GridView :items="categoryItems" :showFavoriteButton="showButton" />
       </ion-content>
     </ion-page>
   </template>
@@ -36,6 +36,8 @@
   const props = defineProps<{
     categoryType: string
   }>();
+
+  const showButton = props.categoryType !== 'all';
 
   const categoryMap: { [key: string]: GridItem[] } = {
     'all': categories,
