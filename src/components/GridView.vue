@@ -25,7 +25,6 @@
             decoding="async"
           />
           
-          <!-- Botón de favoritos - solo se muestra si showFavoriteButton es true -->
           <ion-button
             v-if="showFavoriteButton"
             class="favorite-button"
@@ -35,10 +34,11 @@
             <ion-icon
               :icon="isFavorite(item) ? heart : heartOutline"
               :color="isFavorite(item) ? 'danger' : 'light'"
-              size="large"
+              class="favorite-icon"
             ></ion-icon>
           </ion-button>
 
+          <div class="category-overlay"></div>
           <div class="category-title">
             <h2>{{ $t(item.title) }}</h2>
           </div>
@@ -121,29 +121,28 @@ onMounted(() => {
 <style scoped>
 
 .categories-container {
-  scroll-behavior: smooth;
-}
-.categories-container {
   display: flex;
   flex-direction: column;
-  padding: 0;
+  padding: 16px;
+  gap: 16px;
   min-height: 100%;
   contain: content;
+  background: white; /* Cambiado a blanco para consistencia */
 }
 
 .category-card {
-  transform: translateZ(0);
-  will-change: transform;
-  height: 280px;
+  height: 200px; /* Altura reducida para mejor proporción */
   margin: 0;
-  border-radius: 0;
+  border-radius: 16px;
   position: relative;
   display: flex;
   align-items: flex-end;
   justify-content: center;
   overflow: hidden;
-  background-color: #f0f0f0;
+  background-color: white;
   contain: content;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .category-placeholder {
@@ -152,18 +151,11 @@ onMounted(() => {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #f0f0f0;
+  background: #f8f9fa;
   transition: opacity 0.3s ease;
 }
 
-.category-placeholder.hidden {
-  opacity: 0;
-}
-
 .category-image {
-  aspect-ratio: 16/9;
-  will-change: opacity;
-  transform: translateZ(0);
   position: absolute;
   top: 0;
   left: 0;
@@ -171,69 +163,113 @@ onMounted(() => {
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .category-image.loaded {
   opacity: 1;
 }
 
+.category-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.5)
+  );
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
 .category-title {
   width: 100%;
-  min-height: 80px;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
-  padding: 20px 0;
-  position: relative;
-  z-index: 1;
 }
 
 .category-title h2 {
   color: white;
-  font-size: 1.8em;
-  font-weight: 400;
+  font-size: 1.4rem;
+  font-weight: 600;
   text-align: center;
-  font-family: "Times New Roman", serif;
+  font-family: 'Montserrat', sans-serif;
   margin: 0;
-  padding: 10px 20px;
-  width: 100%;
   text-transform: uppercase;
   letter-spacing: 1px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-ion-card {
-  --background: transparent;
-  box-shadow: none;
-}
-
-ion-content {
-  --padding-start: 0;
-  --padding-end: 0;
-}
-
-ion-card + ion-card {
-  margin-top: 0;
-}
-
-.category-card:active {
-  transform: scale(0.98);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .favorite-button {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 12px;
+  right: 12px;
   z-index: 2;
-  --padding-start: 8px;
-  --padding-end: 8px;
-  --background: rgba(0, 0, 0, 0.3);
+  --padding-start: 10px;
+  --padding-end: 10px;
+  --padding-top: 10px;
+  --padding-bottom: 10px;
+  --background: rgba(255, 255, 255, 0.2);
   --border-radius: 50%;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
-.favorite-button:hover {
-  --background: rgba(0, 0, 0, 0.5);
+.favorite-icon {
+  font-size: 20px;
+  transition: transform 0.2s ease;
+}
+
+/* Hover effects */
+.category-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.category-card:hover .category-overlay {
+  opacity: 0.5;
+}
+
+/* Active state */
+.category-card:active {
+  transform: scale(0.98);
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .categories-container {
+    background: var(--ion-background-color);
+  }
+
+  .category-card {
+    background-color: var(--ion-background-color);
+  }
+
+  .category-placeholder {
+    background: var(--ion-background-color-step-50);
+  }
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .categories-container {
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .category-card {
+    height: 240px;
+  }
+
+  .category-title h2 {
+    font-size: 1.6rem;
+  }
 }
 </style>
