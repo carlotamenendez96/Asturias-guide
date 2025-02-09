@@ -18,7 +18,7 @@ export const baseCategories: GridItem[] =  [
   {
     title: 'Home.categories.viewpoints',
     image: '/src/assets/img/miradores.webp',
-    route: '/miradores'
+    route: '/viewpoints'
   },
   {
     title: 'Home.categories.markets',

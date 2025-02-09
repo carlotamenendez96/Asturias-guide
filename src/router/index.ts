@@ -34,12 +34,12 @@ const routes: Array<RouteRecordRaw> = [
       },
       // Rutas de categorías dentro de tabs
       {
-        path: '/miradores',
+        path: '/viewpoints',
         component: () => import('@/views/CategoryList.vue'),
         props: { categoryType: 'miradores' }
       },
       {
-        path: '/miradores/:id',
+        path: '/viewpoints/:id',
         component: () => import('@/views/CategoryDetail.vue'),
         props: true
       },

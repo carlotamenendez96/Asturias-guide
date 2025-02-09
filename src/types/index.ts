@@ -6,4 +6,4 @@ export interface GridItem {
 }
 
 
-export type CategoryType = 'miradores' | 'beaches' | 'museos';
+export type CategoryType = 'viewpoints' | 'beaches' | 'museos';

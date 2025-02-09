@@ -1,30 +1,31 @@
 <template>
   <ion-page>
-    <ion-header>
+    <!-- <ion-header>
       <ion-toolbar>
         <ion-buttons slot="start">
           <ion-back-button :default-href="defaultBackLink" text=""></ion-back-button>
         </ion-buttons>
         <ion-title>{{ item ? $t(item.title) : '' }}</ion-title>
       </ion-toolbar>
-    </ion-header>
-    
-    <ion-content>
-      <div class="category-detail" v-if="item">
-        <img :src="item.image" :alt="$t(item.title)" class="detail-image"/>
-        <div class="content-container">
-          <div class="description">
-            <h2>{{ $t(`${getItemId()}.title`) }}</h2>
-            <p>{{ $t(`${getItemId()}.description`) }}</p>
-          </div>
-          
-          <div v-for="section in item.sections" :key="section" class="section">
-            <h2>{{ $t(`${getItemId()}.sections.${section}.title`) }}</h2>
-            <p>{{ $t(`${getItemId()}.sections.${section}.content`) }}</p>
+    </ion-header> -->
+    <base-layout :showBackButton="true" @back="goBack">
+      <ion-content :fullscreen="true">
+        <div class="category-detail" v-if="item">
+          <img :src="item.image" :alt="$t(item.title)" class="detail-image"/>
+          <div class="content-container">
+            <div class="description">
+              <h2>{{ $t(`${getItemId()}.title`) }}</h2>
+              <p>{{ $t(`${getItemId()}.description`) }}</p>
+            </div>
+            
+            <div v-for="section in item.sections" :key="section" class="section">
+              <h2>{{ $t(`${getItemId()}.sections.${section}.title`) }}</h2>
+              <p>{{ $t(`${getItemId()}.sections.${section}.content`) }}</p>
+            </div>
           </div>
         </div>
-      </div>
-    </ion-content>
+      </ion-content>
+    </base-layout>
   </ion-page>
 </template>
  
@@ -41,6 +42,7 @@ import {
   IonBackButton
 } from '@ionic/vue';
 import { GridItem, CategoryType } from '@/types';
+import { useNavigationManager } from '@/utils/navigationManager';
 import { viewpoints } from '@/data/viewpoints';
 import { beaches } from '@/data/beaches';
 import { museums } from '@/data/museums';
@@ -55,10 +57,12 @@ type CategoryDataMapType = {
 };
 
 const categoryDataMap: CategoryDataMapType = {
-  'miradores': { data: viewpoints, backLink: '/miradores' },
+  'viewpoints': { data: viewpoints, backLink: '/viewpoints' },
   'beaches': { data: beaches, backLink: '/beaches' },
   'museos': { data: museums, backLink: '/museos' },
 };
+
+const { goBack } = useNavigationManager();
 
 const getCategoryFromPath = (path: string): CategoryType | '' => {
   const matches = path.match(/\/([^/]+)/);
@@ -84,8 +88,13 @@ const item = computed(() => {
   return undefined;
 });
  
+const capitalizeFirstLetter = (string: string) => {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
 const getItemId = () => {
-  return 'Beaches.' + route.params.id;
+  const capitalizedCategory = capitalizeFirstLetter(currentCategory);
+  return `${capitalizedCategory}.${route.params.id}`;
 }
  </script>
  

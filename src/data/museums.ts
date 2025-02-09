@@ -6,11 +6,6 @@ export const museums: GridItem[] =  [
     route: '/beaches'
   },
   {
-    title: 'Home.categories.viewpoints',
-    image: '/src/assets/img/miradores.webp',
-    route: '/miradores'
-  },
-  {
     title: 'Home.categories.museums',
     image: '/src/assets/img/museos.webp',
     route: '/museos'

@@ -1,20 +1,15 @@
 import { GridItem } from "@/types/index"
 export const viewpoints: GridItem[] =  [
   {
-    title: 'Home.categories.viewpoints',
+    title: 'Viewpoints.mirador-del-sablon.title',
     image: '/src/assets/img/miradores.webp',
-    route: '/miradores'
+    route: '/viewpoints/mirador-del-sablon',
+    sections: [
+      'parking',
+      'access', 
+      'services'
+    ]
   },
-  {
-    title: 'Home.categories.beaches',
-    image: '/src/assets/img/playas.webp',
-    route: '/beaches'
-  },
-  {
-    title: 'Home.categories.museums',
-    image: '/src/assets/img/museos.webp',
-    route: '/museos'
-  }
 ]
 // export const viewpoints: GridItem[] = baseviewpoints.map(category => ({
 //   ...category,
