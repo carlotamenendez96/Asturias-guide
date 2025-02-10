@@ -52,5 +52,113 @@ export default {
         "content": "There are no direct services, but nearby there are recreational areas and hiking trails. It is advisable to bring water and some food."
       }
     }
+  },
+  "mirador-de-pedro-udaondo": {
+    "title": "Pedro Udaondo Viewpoint",
+    "description": "Located in the municipality of Aller, this viewpoint offers a privileged view of the Asturian mountains and the green valleys of the area. It is a perfect place to enjoy nature and the silence of the mountains.",
+    "sections": {
+      "parking": {
+        "title": "Parking",
+        "content": "There is a small parking area near the viewpoint, though it can fill up quickly during peak times. It is recommended to arrive early."
+      },
+      "access": {
+        "title": "Access",
+        "content": "Access is by car via a narrow road that leads to the viewpoint. The road can be steep and winding in some sections."
+      },
+      "services": {
+        "title": "Services",
+        "content": "There are no services at the viewpoint itself. It is advisable to bring food and water, as well as to wear appropriate footwear for walking."
+      }
+    }
+  },
+  "mirador-cristo-naranco": {
+    "title": "Cristo del Naranco Viewpoint",
+    "description": "Located on Mount Naranco, near Oviedo, this viewpoint offers a panoramic view of the city and the surrounding mountains. It is a popular spot for both locals and tourists.",
+    "sections": {
+      "parking": {
+        "title": "Parking",
+        "content": "There is a free parking area near the viewpoint, though it can be limited during peak times. It is recommended to arrive early."
+      },
+      "access": {
+        "title": "Access",
+        "content": "Access is by car via a narrow road that leads to the viewpoint. The road can be steep and winding in some sections."
+      },
+      "services": {
+        "title": "Services",
+        "content": "There are no services at the viewpoint itself. It is advisable to bring food and water, as well as to wear appropriate footwear for walking."
+      }
+    }
+  },
+  "mirador-de-la-boriza": {
+    "title": "Boriza Viewpoint",
+    "description": "Located in the town of Celorio, this viewpoint offers a stunning view of the Cantabrian Sea and the surrounding coastline. It is a popular spot for watching the sunset.",
+    "sections": {
+      "parking": {
+        "title": "Parking",
+        "content": "There is a free parking area near the viewpoint, though it can be limited during peak times. It is recommended to arrive early."
+      },
+      "access": {
+        "title": "Access",
+        "content": "Access is by car via a narrow road that leads to the viewpoint. The road can be steep and winding in some sections."
+      },
+      "services": {
+        "title": "Services",
+        "content": "There are no services at the viewpoint itself. It is advisable to bring food and water, as well as to wear appropriate footwear for walking."
+      }
+    }
+  },
+  "mirador-de-la-regalina": {
+    "title": "Regalina Viewpoint",
+    "description": "Located in Cadavedo, this viewpoint offers a panoramic view of the Asturian coast and the Cantabrian Sea. It is a popular spot for watching the sunset.",
+    "sections": {
+      "parking": {
+        "title": "Parking",
+        "content": "There is a free parking area near the viewpoint, though it can be limited during peak times. It is recommended to arrive early."
+      },
+      "access": {
+        "title": "Access",
+        "content": "Access is by car via a narrow road that leads to the viewpoint. The road can be steep and winding in some sections."
+      },
+      "services": {
+        "title": "Services",
+        "content": "There are no services at the viewpoint itself. It is advisable to bring food and water, as well as to wear appropriate footwear for walking."
+      }
+    }
+  },
+  "mirador-de-penouta-interior": {
+    "title": "Penouta Interior Viewpoint",
+    "description": "Located in the Somiedo Natural Park, this viewpoint offers a panoramic view of the mountains and valleys of the area. It is a popular spot for birdwatching and hiking.",
+    "sections": {
+      "parking": {
+        "title": "Parking",
+        "content": "There is a free parking area near the viewpoint, though it can be limited during peak times. It is recommended to arrive early."
+      },
+      "access": {
+        "title": "Access",
+        "content": "Access is by car via a narrow road that leads to the viewpoint. The road can be steep and winding in some sections."
+      },
+      "services": {
+        "title": "Services",
+        "content": "There are no services at the viewpoint itself. It is advisable to bring food and water, as well as to wear appropriate footwear for walking."
+      }
+    }
+  },
+  "mirador-de-torimbia": {
+    "title": "Torimbia Viewpoint",
+    "description": "Located in the town of Niembro, this viewpoint offers a panoramic view of the beach of Torimbia and the surrounding coastline. It is a popular spot for watching the sunset.",
+    "sections": {
+      "parking": {
+        "title": "Parking",
+        "content": "There is a free parking area near the viewpoint, though it can be limited during peak times. It is recommended to arrive early."
+      },
+      "access": {
+        "title": "Access",
+        "content": "Access is by car via a narrow road that leads to the viewpoint. The road can be steep and winding in some sections."
+      },
+      "services": {
+        "title": "Services",
+        "content": "There are no services at the viewpoint itself. It is advisable to bring food and water, as well as to wear appropriate footwear for walking."
+      }
+    }
   }
 }

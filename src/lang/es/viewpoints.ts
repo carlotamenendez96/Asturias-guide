@@ -52,5 +52,114 @@ export default {
         "content": "No cuenta con servicios propios, pero en las cercanías hay áreas recreativas y rutas de senderismo. Se recomienda llevar agua y algo de comida."
       }
     }
+  },
+  "mirador-de-pedro-udaondo": {
+    "title": "Mirador de Pedro Udaondo",
+    "description": "Situado en el concejo de Aller, este mirador ofrece una vista privilegiada de los montes asturianos y los valles verdes de la zona. Es un lugar perfecto para disfrutar de la naturaleza y el silencio de la montaña.",
+    "sections": {
+      "parking": {
+        "title": "Parking",
+        "content": "Hay una pequeña zona de aparcamiento gratuita cerca del mirador. En días de buena afluencia puede llenarse rápido."
+      },
+      "access": {
+        "title": "Acceso",
+        "content": "El acceso es en coche a través de una carretera de montaña. También se puede llegar caminando mediante rutas de senderismo cercanas."
+      },
+      "services": {
+        "title": "Servicios",
+        "content": "No cuenta con servicios propios, por lo que se recomienda llevar agua y provisiones."
+      }
+    }
+  },
+  "mirador-cristo-naranco": {
+    "title": "Mirador del Cristo del Naranco",
+    "description": "Ubicado en la cima del monte Naranco, este mirador ofrece una impresionante vista panorámica de Oviedo y sus alrededores. Junto a él se encuentra la icónica estatua del Sagrado Corazón de Jesús.",
+    "sections": {
+      "parking": {
+        "title": "Parking",
+        "content": "Dispone de zona de aparcamiento gratuita en las inmediaciones del mirador. Puede estar concurrido en fines de semana y festivos."
+      },
+      "access": {
+        "title": "Acceso",
+        "content": "Se puede llegar en coche por carretera desde Oviedo. También existen rutas de senderismo desde la ciudad hasta la cima."
+      },
+      "services": {
+        "title": "Servicios",
+        "content": "Cuenta con zonas para sentarse y disfrutar de las vistas. En los alrededores hay áreas recreativas y rutas de senderismo."
+      }
+    }
+  },
+  "mirador-de-la-boriza": {
+    "title": "Mirador de La Boriza",
+    "description": "Este mirador, situado en Llanes, ofrece una vista espectacular de la costa asturiana, con los acantilados y playas de Ballota y Andrín en primer plano.",
+    "sections": {
+      "parking": {
+        "title": "Parking",
+        "content": "Cuenta con un aparcamiento gratuito junto al mirador, aunque en verano puede llenarse rápidamente."
+      },
+      "access": {
+        "title": "Acceso",
+        "content": "Se puede acceder fácilmente en coche por la carretera que une Llanes con Andrín."
+      },
+      "services": {
+        "title": "Servicios",
+        "content": "No dispone de servicios propios, pero en las cercanías hay bares y restaurantes en Andrín y Llanes."
+      }
+    }
+  },
+  "mirador-de-la-regalina": {
+    "title": "Mirador de La Regalina",
+    "description": "Ubicado en Cadavedo, este mirador ofrece una de las vistas más emblemáticas de la costa occidental asturiana, con acantilados espectaculares y la icónica ermita de La Regalina.",
+    "sections": {
+      "parking": {
+        "title": "Parking",
+        "content": "Dispone de una zona de aparcamiento gratuita a pocos metros del mirador."
+      },
+      "access": {
+        "title": "Acceso",
+        "content": "Se puede llegar en coche sin dificultad desde Cadavedo. También hay rutas de senderismo que pasan por la zona."
+      },
+      "services": {
+        "title": "Servicios",
+        "content": "Cuenta con bancos y mesas de picnic, además de la ermita como punto de interés."
+      }
+    }
+  },
+  "mirador-de-penouta-interior": {
+    "title": "Mirador de Penouta Interior",
+    "description": "Situado en el concejo de Boal, este mirador ofrece vistas impresionantes de las montañas y valles del interior de Asturias, un paisaje verde y montañoso ideal para la desconexión.",
+    "sections": {
+      "parking": {
+        "title": "Parking",
+        "content": "Hay un aparcamiento gratuito cercano al mirador."
+      },
+      "access": {
+        "title": "Acceso",
+        "content": "Se llega en coche a través de una carretera de montaña con algunas curvas cerradas."
+      },
+      "services": {
+        "title": "Servicios",
+        "content": "No cuenta con servicios, por lo que se recomienda llevar agua y algo de comida si se planea estar un tiempo en la zona."
+      }
+    }
+  },
+  "mirador-de-torimbia": {
+    "title": "Mirador de Torimbia",
+    "description": "Uno de los miradores más bellos de Asturias, con vistas a la playa de Torimbia, una de las más espectaculares y vírgenes de la región.",
+    "sections": {
+      "parking": {
+        "title": "Parking",
+        "content": "Cuenta con un aparcamiento gratuito en la parte alta del mirador, aunque en temporada alta puede llenarse."
+      },
+      "access": {
+        "title": "Acceso",
+        "content": "Se puede llegar en coche hasta el aparcamiento y luego caminar unos minutos hasta el mirador. También hay rutas de senderismo que llevan hasta la zona."
+      },
+      "services": {
+        "title": "Servicios",
+        "content": "No dispone de servicios propios, pero en Niembro hay bares y restaurantes."
+      }
+    }
   }
+  
 }

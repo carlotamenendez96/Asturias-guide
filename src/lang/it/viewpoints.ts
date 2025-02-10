@@ -52,5 +52,114 @@ export default {
         "content": "Non ci sono servizi diretti, ma nelle vicinanze si trovano aree di sosta e sentieri escursionistici. Si consiglia di portare acqua e qualche snack."
       }
     }
+  },
+  "mirador-de-pedro-udaondo": {
+    "title": "Belvedere di Pedro Udaondo",
+    "description": "Situato nel comune di Aller, questo belvedere offre una vista privilegiata sulle montagne asturiane e sui verdi valli della zona. È un luogo perfetto per godersi la natura e il silenzio delle montagne.",
+    "sections": {
+      "parking": {
+        "title": "Parcheggio",
+        "content": "C'è un parcheggio gratuito vicino al belvedere. In alta stagione può riempirsi rapidamente."  
+      },
+      "access": {
+        "title": "Accesso",
+        "content": "L'accesso è in auto tramite una strada di montagna. Ci sono anche sentieri escursionistici che portano al belvedere."
+      },
+      "services": {
+        "title": "Servizi",
+        "content": "Il belvedere non dispone di servizi diretti, ma nelle vicinanze ci sono aree picnic e sentieri escursionistici. Si consiglia di portare acqua e qualcosa da mangiare."
+      }
+    }
+  },
+  "mirador-cristo-naranco": {
+    "title": "Belvedere del Cristo del Naranco",
+    "description": "Situato sul monte Naranco, nei pressi di Oviedo, questo belvedere offre una vista panoramica sulla città e sulle montagne circostanti. È un luogo ideale per godersi la natura e la tranquillità.",
+    "sections": {
+      "parking": {
+        "title": "Parcheggio",
+        "content": "C'è un parcheggio gratuito vicino al belvedere, ma può essere limitato in alta stagione."
+      },
+      "access": {
+        "title": "Accesso",
+        "content": "L'accesso è in auto tramite una strada panoramica. Ci sono anche sentieri escursionistici che portano al belvedere."
+      },
+      "services": {
+        "title": "Servizi",
+        "content": "Il belvedere dispone di panchine e servizi igienici. Nelle vicinanze ci sono bar e ristoranti."
+      }
+    }
+  },
+  "mirador-de-la-boriza": {
+    "title": "Belvedere de la Boriza",
+    "description": "Situato a Llanes, questo belvedere offre una vista spettacolare sulla costa asturiana e sulle montagne circostanti. È un luogo ideale per godersi la natura e il paesaggio marino.",
+    "sections": {
+      "parking": {
+        "title": "Parcheggio",
+        "content": "C'è un parcheggio gratuito vicino al belvedere, ma può essere limitato in alta stagione."
+      },
+      "access": {
+        "title": "Accesso",
+        "content": "L'accesso è in auto tramite una strada panoramica. Ci sono anche sentieri escursionistici che portano al belvedere."
+      },
+      "services": {
+        "title": "Servizi",
+        "content": "Il belvedere dispone di panchine e servizi igienici. Nelle vicinanze ci sono bar e ristoranti."
+      }
+    }
+  },
+  "mirador-de-la-regalina": {
+    "title": "Belvedere de la Regalina",
+    "description": "Situato a Cadavedo, questo belvedere offre una vista panoramica sulla costa asturiana e sul Mar Cantabrico. È un luogo ideale per godersi il tramonto e la natura.",
+    "sections": {
+      "parking": {
+        "title": "Parcheggio",
+        "content": "C'è un parcheggio gratuito vicino al belvedere, ma può essere limitato in alta stagione."
+      },
+      "access": {
+        "title": "Accesso",
+        "content": "L'accesso è in auto tramite una strada panoramica. Ci sono anche sentieri escursionistici che portano al belvedere."
+      },
+      "services": {
+        "title": "Servizi",
+        "content": "Il belvedere dispone di panchine e servizi igienici. Nelle vicinanze ci sono bar e ristoranti."
+      }
+    }
+  },
+  "mirador-de-penouta-interior": {
+    "title": "Belvedere de Penouta Interior",
+    "description": "Situato nel comune di Aller, questo belvedere offre una vista privilegiata sulle montagne asturiane e sui verdi valli della zona. È un luogo perfetto per godersi la natura e il silenzio delle montagne.",
+    "sections": {
+      "parking": {
+        "title": "Parcheggio",
+        "content": "C'è un parcheggio gratuito vicino al belvedere. In alta stagione può riempirsi rapidamente."  
+
+      },
+      "access": {
+        "title": "Accesso",
+        "content": "L'accesso è in auto tramite una strada di montagna. Ci sono anche sentieri escursionistici che portano al belvedere."
+      },
+      "services": {
+        "title": "Servizi",
+        "content": "Il belvedere non dispone di servizi diretti, ma nelle vicinanze ci sono aree picnic e sentieri escursionistici. Si consiglia di portare acqua e qualcosa da mangiare."
+      }
+    }
+  },
+  "mirador-de-torimbia": {
+    "title": "Belvedere di Torimbia",
+    "description": "Situato a Llanes, questo belvedere offre una vista spettacolare sulla spiaggia di Torimbia e sulle montagne circostanti. È un luogo ideale per godersi la natura e il paesaggio marino.",
+    "sections": {
+      "parking": {
+        "title": "Parcheggio",
+        "content": "C'è un parcheggio gratuito vicino al belvedere, ma può essere limitato in alta stagione."
+      },
+      "access": {
+        "title": "Accesso",
+        "content": "L'accesso è in auto tramite una strada panoramica. Ci sono anche sentieri escursionistici che portano al belvedere."
+      },
+      "services": {
+        "title": "Servizi",
+        "content": "Il belvedere dispone di panchine e servizi igienici. Nelle vicinanze ci sono bar e ristoranti."
+      }
+    }
   }
 }

@@ -52,5 +52,113 @@ export default {
         "content": "Es gibt keine direkten Dienstleistungen, aber in der Nähe gibt es Erholungsgebiete und Wanderwege. Es wird empfohlen, Wasser und etwas Proviant mitzubringen."
       }
     }
+  },
+  "mirador-de-pedro-udaondo": {
+    "title": "Pedro Udaondo Aussichtspunkt",
+    "description": "Gelegen in der Gemeinde Aller, bietet dieser Aussichtspunkt einen privilegierten Blick auf die asturischen Berge und die grünen Täler der Region. Es ist ein perfekter Ort, um die Natur und die Stille der Berge zu genießen.",
+    "sections": {
+      "parking": {
+        "title": "Parkplatz",
+        "content": "Es gibt einen kostenlosen Parkplatz in der Nähe des Aussichtspunkts. An Tagen mit hohem Besucheraufkommen kann er jedoch schnell voll werden."
+      },
+      "access": {
+        "title": "Zugang",
+        "content": "Der Zugang erfolgt mit dem Auto über eine schmale Bergstra  e. Es gibt auch Wanderwege, die zum Aussichtspunkt führen."
+      },
+      "services": {
+        "title": "Dienstleistungen",
+        "content": "Es gibt keine direkten Dienstleistungen, daher wird empfohlen, Wasser und Proviant mitzubringen."
+      }
+    }
+  },
+  "mirador-cristo-naranco": {
+    "title": "Cristo Naranco Aussichtspunkt",
+    "description": "Dieser Aussichtspunkt bietet einen herrlichen Blick auf die Stadt Oviedo und die umliegenden Berge. Er ist ein beliebter Treffpunkt für Einheimische und Besucher, um die Aussicht zu genießen und Fotos zu machen.",
+    "sections": {
+      "parking": {
+        "title": "Parkplatz",
+        "content": "Es gibt einen kostenlosen Parkplatz in der Nähe des Aussichtspunkts, der an Wochenenden und Feiertagen jedoch begrenzt sein kann. Es wird empfohlen, frühzeitig anzukommen."  
+      },
+      "access": {
+        "title": "Zugang",
+        "content": "Der Zugang erfolgt mit dem Auto über eine schmale Straße, die zum Aussichtspunkt führt. Die Straße kann in einigen Abschnitten steil und kurvenreich sein."
+      },
+      "services": {
+        "title": "Dienstleistungen",
+        "content": "Es gibt keine direkten Dienstleistungen am Aussichtspunkt. Es wird empfohlen, Wasser und Proviant mitzubringen sowie geeignetes Schuhwerk zum Wandern zu tragen."
+      }
+    }
+  },
+  "mirador-de-la-boriza": {
+    "title": "Boriza Aussichtspunkt",
+    "description": "Dieser Aussichtspunkt bietet einen spektakulären Blick auf die Küste von Llanes und die umliegenden Strände. Er ist ein beliebter Ort, um die Sonne zu genießen und die Wellen des Kantabrischen Meeres zu beobachten.",
+    "sections": {
+      "parking": {
+        "title": "Parkplatz",
+        "content": "Es gibt einen kostenlosen Parkplatz in der Nähe des Aussichtspunkts, der jedoch an Wochenenden und Feiertagen begrenzt sein kann. Es wird empfohlen, frühzeitig anzukommen."    
+      },
+      "access": {
+        "title": "Zugang",
+        "content": "Der Zugang erfolgt mit dem Auto über eine schmale Straße, die zum Aussichtspunkt führt. Die Straße kann in einigen Abschnitten steil und kurvenreich sein."
+      },
+      "services": {
+        "title": "Dienstleistungen",
+        "content": "Es gibt keine direkten Dienstleistungen am Aussichtspunkt. Es wird empfohlen, Wasser und Proviant mitzubringen sowie geeignetes Schuhwerk zum Wandern zu tragen."
+      }
+    }
+  },
+  "mirador-de-la-regalina": {
+    "title": "Regalina Aussichtspunkt",
+    "description": "Dieser Aussichtspunkt bietet einen Panoramablick auf die asturische Küste und das Kantabrische Meer. Er ist ein beliebter Ort, um den Sonnenuntergang zu beobachten und die Schönheit der Natur zu genießen.",
+    "sections": {
+      "parking": {
+        "title": "Parkplatz",
+        "content": "Es gibt einen kostenlosen Parkplatz in der Nähe des Aussichtspunkts, der jedoch an Wochenenden und Feiertagen begrenzt sein kann. Es wird empfohlen, frühzeitig anzukommen."  
+      },
+      "access": {
+        "title": "Zugang",
+        "content": "Der Zugang erfolgt mit dem Auto über eine schmale Straße, die zum Aussichtspunkt führt. Die Straße kann in einigen Abschnitten steil und kurvenreich sein."
+      },
+      "services": {
+        "title": "Dienstleistungen",
+        "content": "Es gibt keine direkten Dienstleistungen am Aussichtspunkt. Es wird empfohlen, Wasser und Proviant mitzubringen sowie geeignetes Schuhwerk zum Wandern zu tragen."
+      }
+    }
+  },
+  "mirador-de-penouta-interior": {
+    "title": "Penouta Innenansicht",
+    "description": "Dieser Aussichtspunkt bietet einen Blick auf das Innere des Berges Penouta und die umliegende Landschaft. Er ist ein ruhiger Ort, um die Natur zu genießen und die Stille der Berge zu erleben.", 
+    "sections": {
+      "parking": {
+        "title": "Parkplatz",
+        "content": "Es gibt einen kostenlosen Parkplatz in der Nähe des Aussichtspunkts. An Tagen mit hohem Besucheraufkommen kann er jedoch schnell  voll werden." 
+      },
+      "access": {
+        "title": "Zugang",
+        "content": "Der Zugang erfolgt mit dem Auto über eine schmale Bergstraße. Es gibt auch Wanderwege, die zum Aussichtspunkt führen."
+      },
+      "services": {
+        "title": "Dienstleistungen",
+        "content": "Es gibt keine direkten Dienstleistungen, daher wird empfohlen, Wasser und Proviant mitzubringen."
+      }
+    }
+  },
+  "mirador-de-torimbia": {
+    "title": "Torimbia Aussichtspunkt",
+    "description": "Dieser Aussichtspunkt bietet einen spektakulären Blick auf den Strand von Torimbia und die umliegende Landschaft. Er ist ein beliebter Ort, um die Sonne zu genießen und die Wellen des Kantabrischen Meeres zu beobachten.",
+    "sections": {
+      "parking": {
+        "title": "Parkplatz",
+        "content": "Es gibt einen kostenlosen Parkplatz in der Nähe des Aussichtspunkts, der jedoch an Wochenenden und Feiertagen begrenzt sein kann. Es wird empfohlen, frühzeitig anzukommen."  
+      },
+      "access": {
+        "title": "Zugang",
+        "content": "Der Zugang erfolgt mit dem Auto über eine schmale Straße, die zum Aussichtspunkt führt. Die Straße kann in einigen Abschnitten steil und kurvenreich sein."
+      },
+      "services": {
+        "title": "Dienstleistungen",
+        "content": "Es gibt keine direkten Dienstleistungen am Aussichtspunkt. Es wird empfohlen, Wasser und Proviant mitzubringen sowie geeignetes Schuhwerk zum Wandern zu tragen." 
+      }
+    },
   }
 }
