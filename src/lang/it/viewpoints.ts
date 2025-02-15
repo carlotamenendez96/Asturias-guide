@@ -3,6 +3,9 @@ export default {
     "title": "Belvedere del Sablón",
     "description": "Situato sulla costa di Llanes, il Belvedere del Sablón offre una vista spettacolare sulla spiaggia omonima e sul centro storico del paese. È un luogo perfetto per ascoltare il suono del mare e godersi un tramonto indimenticabile.",
     "sections": {
+      "location": {
+        "title": "Ubicazione"
+      },
       "parking": {
         "title": "Parcheggio",
         "content": "Ci sono parcheggi gratuiti nelle vicinanze del belvedere, ma in alta stagione possono riempirsi rapidamente. Si consiglia di arrivare presto per trovare posto."
@@ -21,6 +24,9 @@ export default {
     "title": "Belvedere di San Roque",
     "description": "Situato a Lastres, questo belvedere è uno dei più famosi delle Asturie. Da qui si possono ammirare il porto di Lastres, il Mar Cantabrico e, sullo sfondo, i Picos de Europa.",
     "sections": {
+      "location": {
+        "title": "Ubicazione"
+      },
       "parking": {
         "title": "Parcheggio",
         "content": "C'è un parcheggio gratuito, ma non molto grande. In estate e nei fine settimana può riempirsi rapidamente."
@@ -39,6 +45,9 @@ export default {
     "title": "Belvedere del Fitu",
     "description": "Uno dei belvedere più famosi delle Asturie, situato nella catena montuosa di Sueve. Da qui si possono ammirare sia la costa asturiana che i Picos de Europa in un incredibile panorama a 360 gradi.",
     "sections": {
+      "location": {
+        "title": "Ubicazione"
+      },
       "parking": {
         "title": "Parcheggio",
         "content": "C'è un ampio parcheggio gratuito proprio accanto al belvedere. Nei fine settimana e nei giorni festivi può riempirsi rapidamente."
@@ -57,6 +66,9 @@ export default {
     "title": "Belvedere di Pedro Udaondo",
     "description": "Situato nel comune di Aller, questo belvedere offre una vista privilegiata sulle montagne asturiane e sui verdi valli della zona. È un luogo perfetto per godersi la natura e il silenzio delle montagne.",
     "sections": {
+      "location": {
+        "title": "Ubicazione"
+      },
       "parking": {
         "title": "Parcheggio",
         "content": "C'è un parcheggio gratuito vicino al belvedere. In alta stagione può riempirsi rapidamente."  
@@ -75,6 +87,9 @@ export default {
     "title": "Belvedere del Cristo del Naranco",
     "description": "Situato sul monte Naranco, nei pressi di Oviedo, questo belvedere offre una vista panoramica sulla città e sulle montagne circostanti. È un luogo ideale per godersi la natura e la tranquillità.",
     "sections": {
+      "location": {
+        "title": "Ubicazione"
+      },
       "parking": {
         "title": "Parcheggio",
         "content": "C'è un parcheggio gratuito vicino al belvedere, ma può essere limitato in alta stagione."
@@ -93,6 +108,9 @@ export default {
     "title": "Belvedere de la Boriza",
     "description": "Situato a Llanes, questo belvedere offre una vista spettacolare sulla costa asturiana e sulle montagne circostanti. È un luogo ideale per godersi la natura e il paesaggio marino.",
     "sections": {
+      "location": {
+        "title": "Ubicazione"
+      },
       "parking": {
         "title": "Parcheggio",
         "content": "C'è un parcheggio gratuito vicino al belvedere, ma può essere limitato in alta stagione."
@@ -111,6 +129,9 @@ export default {
     "title": "Belvedere de la Regalina",
     "description": "Situato a Cadavedo, questo belvedere offre una vista panoramica sulla costa asturiana e sul Mar Cantabrico. È un luogo ideale per godersi il tramonto e la natura.",
     "sections": {
+      "location": {
+        "title": "Ubicazione"
+      },
       "parking": {
         "title": "Parcheggio",
         "content": "C'è un parcheggio gratuito vicino al belvedere, ma può essere limitato in alta stagione."
@@ -129,6 +150,9 @@ export default {
     "title": "Belvedere de Penouta Interior",
     "description": "Situato nel comune di Aller, questo belvedere offre una vista privilegiata sulle montagne asturiane e sui verdi valli della zona. È un luogo perfetto per godersi la natura e il silenzio delle montagne.",
     "sections": {
+      "location": {
+        "title": "Ubicazione"
+      },
       "parking": {
         "title": "Parcheggio",
         "content": "C'è un parcheggio gratuito vicino al belvedere. In alta stagione può riempirsi rapidamente."  
@@ -148,6 +172,30 @@ export default {
     "title": "Belvedere di Torimbia",
     "description": "Situato a Llanes, questo belvedere offre una vista spettacolare sulla spiaggia di Torimbia e sulle montagne circostanti. È un luogo ideale per godersi la natura e il paesaggio marino.",
     "sections": {
+      "location": {
+        "title": "Ubicazione"
+      },
+      "parking": {
+        "title": "Parcheggio",
+        "content": "C'è un parcheggio gratuito vicino al belvedere, ma può essere limitato in alta stagione."
+      },
+      "access": {
+        "title": "Accesso",
+        "content": "L'accesso è in auto tramite una strada panoramica. Ci sono anche sentieri escursionistici che portano al belvedere."
+      },
+      "services": {
+        "title": "Servizi",
+        "content": "Il belvedere dispone di panchine e servizi igienici. Nelle vicinanze ci sono bar e ristoranti."
+      }
+    }
+  },
+  "mirador-cabo-peñas": {
+    "title": "Belvedere di Cabo Peñas",
+    "description": "Situato sulla punta più settentrionale delle Asturie, il belvedere di Cabo Peñas offre una vista spettacolare sul Mar Cantabrico e sulle scogliere circostanti. È un luogo ideale per osservare il mare e godersi il tramonto.",
+    "sections": {
+      "location": {
+        "title": "Ubicazione"
+      },
       "parking": {
         "title": "Parcheggio",
         "content": "C'è un parcheggio gratuito vicino al belvedere, ma può essere limitato in alta stagione."

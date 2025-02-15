@@ -40,6 +40,23 @@
                 </div>
                 <p>{{ $t(`${getItemId()}.sections.${section}.content`) }}</p>
               </div>
+              <div v-if="item?.location" class="info-card card-orange">
+                <div class="card-header">
+                  <ion-icon :icon="locationOutline" class="section-icon"></ion-icon>
+                  <h2>{{ $t(`${getItemId()}.sections.location.title`) }}</h2>
+                </div>
+                <div class="map-container">
+                  <iframe
+                    :src="getGoogleMapsUrl"
+                    width="100%"
+                    height="300"
+                    style="border:0;"
+                    allowfullscreen=true
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -62,7 +79,7 @@ import {
   IonButton,
   IonIcon
 } from '@ionic/vue';
-import { heart, heartOutline } from 'ionicons/icons';
+import { heart, heartOutline, locationOutline } from 'ionicons/icons';
 import { GridItem, CategoryType } from '@/types';
 import { useNavigationManager } from '@/utils/navigationManager';
 import { useFavoritesStore } from '@/stores/favorites';
@@ -101,6 +118,14 @@ const defaultBackLink = computed(() => {
     return categoryDataMap[currentCategory as CategoryType].backLink;
   }
   return '/all-options';
+});
+
+const getGoogleMapsUrl = computed(() => {
+  if (item.value?.location) {
+    const { lat, lng } = item.value.location;
+    return `https://www.google.com/maps/embed/v1/place?key=${import.meta.env.VITE_GOOGLE_MAPS_API_KEY}&q=${lat},${lng}&zoom=15`;
+  }
+  return '';
 });
 
 const item = computed(() => {
@@ -284,6 +309,26 @@ const isFavorite = (item: GridItem) => {
 .info-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.map-container {
+  margin-top: 15px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Nuevo estilo para la tarjeta del mapa */
+.card-orange {
+  background: rgba(251, 146, 60, 0.1);
+  border: 1px solid rgba(251, 146, 60, 0.2);
+}
+
+/* Ajuste del iframe para modo oscuro */
+@media (prefers-color-scheme: dark) {
+  .map-container {
+    border: 1px solid var(--ion-color-medium);
+  }
 }
 
 /* Dark Mode Support */

@@ -8,7 +8,11 @@ export const viewpoints: GridItem[] =  [
       'parking',
       'access', 
       'services'
-    ]
+    ],
+    location: {
+      lat: 43.5811386,
+      lng: -6.2489891
+    }
   },
   {
     title: 'Viewpoints.mirador-de-san-roque.title',
@@ -18,7 +22,11 @@ export const viewpoints: GridItem[] =  [
       'parking',
       'access', 
       'services'
-   ]
+   ],
+   location: {
+    lat: 43.51638510368628,
+    lng: -5.268832147121429
+   }
   },
   {
     title: 'Viewpoints.mirador-del-fitu.title',
@@ -38,7 +46,11 @@ export const viewpoints: GridItem[] =  [
       'parking',
       'access', 
       'services'
-    ]
+    ],
+    location: {
+      lat:  43.4476547,
+      lng: -5.1848655
+    }
   },
   {
     title: 'Viewpoints.mirador-cristo-naranco.title',
@@ -48,7 +60,11 @@ export const viewpoints: GridItem[] =  [
       'parking',
       'access', 
       'services'
-    ]
+    ],
+    location: {
+      lat: 43.38472644414714,
+      lng: -5.86374822209046
+    }
   },
   {
     title: 'Viewpoints.mirador-de-la-boriza.title',
@@ -58,7 +74,11 @@ export const viewpoints: GridItem[] =  [
       'parking',
       'access', 
       'services'
-    ]
+    ],
+    location: {
+      lat:  43.4099808,
+      lng: -4.7117085
+    }
   },
   {
     title: 'Viewpoints.mirador-de-la-regalina.title',
@@ -68,7 +88,11 @@ export const viewpoints: GridItem[] =  [
       'parking',
       'access', 
       'services'
-    ]
+    ],
+    location: {
+      lat: 43.555064380382035,
+      lng: -6.372285559019204
+    }
   },
   {
     title: 'Viewpoints.mirador-de-penouta-interior.title',
@@ -78,7 +102,11 @@ export const viewpoints: GridItem[] =  [
       'parking',
       'access', 
       'services'
-    ]
+    ],
+    location: {
+      lat: 43.43418707105134,
+      lng: -6.837765130188793
+    }
   },
   {
     title: 'Viewpoints.mirador-de-torimbia.title',
@@ -88,8 +116,26 @@ export const viewpoints: GridItem[] =  [
       'parking',
       'access', 
       'services'
-    ]
+    ], 
+    location: {
+      lat: 43.4424125,
+      lng:  -4.8550563888889
+    }
   },
+  {
+    title: 'Viewpoints.mirador-cabo-peñas.title',
+    image: 'https://imgur.com/QQsF0tJ.jpeg',
+    route: '/viewpoints/mirador-cabo-peñas',
+    sections: [
+      'parking',
+      'access',
+      'services'
+    ],
+    location: {
+      lat: 43.65569444,
+      lng:  -5.84890278
+    }
+  }
 ]
 // export const viewpoints: GridItem[] = baseviewpoints.map(category => ({
 //   ...category,

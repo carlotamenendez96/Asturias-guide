@@ -3,6 +3,10 @@ export interface GridItem {
   image: string; 
   route: string;
   sections?: string[];
+  location?: {
+    lat: number;
+    lng: number;
+  }
 }
 
 

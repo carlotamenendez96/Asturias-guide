@@ -56,13 +56,8 @@ import BaseLayout from '@/components/BaseLayout.vue';
 import { useNavigationManager } from '@/utils/navigationManager';
 import { useRouter } from 'vue-router';
 import { useFavoritesStore } from '@/stores/favorites';
+import { GridItem } from '@/types';
 
-interface GridItem {
-  title: string;
-  image: string;
-  route: string;
-  sections?: string[];
-}
 
 const props = defineProps<{
   items: GridItem[];
@@ -209,21 +204,21 @@ onMounted(() => {
 
 .favorite-button {
   position: absolute;
-  top: 12px;
-  right: 12px;
+  top: 20px;
+  right: 20px;
   z-index: 2;
-  --padding-start: 10px;
-  --padding-end: 10px;
-  --padding-top: 10px;
-  --padding-bottom: 10px;
+  --padding-start: 14px;
+  --padding-end: 14px;
+  --padding-top: 14px;
+  --padding-bottom: 14px;
   --background: rgba(255, 255, 255, 0.2);
   --border-radius: 50%;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .favorite-icon {
-  font-size: 20px;
+  font-size: 24px;
   transition: transform 0.2s ease;
 }
 
