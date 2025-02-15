@@ -79,7 +79,7 @@ import {
   IonButton,
   IonIcon
 } from '@ionic/vue';
-import { heart, heartOutline, locationOutline } from 'ionicons/icons';
+import { heart, heartOutline, locationOutline, informationCircle } from 'ionicons/icons';
 import { GridItem, CategoryType } from '@/types';
 import { useNavigationManager } from '@/utils/navigationManager';
 import { useFavoritesStore } from '@/stores/favorites';
@@ -161,7 +161,8 @@ const getSectionIcon = (section: string) => {
   const iconMap: { [key: string]: string } = {
     parking: car,
     access: footsteps,
-    services: restaurant
+    services: restaurant,
+    tips: informationCircle  
   };
   return iconMap[section];
 };
@@ -170,7 +171,8 @@ const getCardClass = (section: string) => {
   const classMap: { [key: string]: string } = {
     parking: 'card-blue',
     access: 'card-green',
-    services: 'card-purple'
+    services: 'card-purple',
+    tips: 'card-yellow' 
   };
   return classMap[section];
 };
@@ -305,6 +307,16 @@ const isFavorite = (item: GridItem) => {
   border: 1px solid rgba(139, 92, 246, 0.2);
 }
 
+.card-yellow {
+  background: rgba(234, 179, 8, 0.1);
+  border: 1px solid rgba(234, 179, 8, 0.2);
+}
+
+.card-orange {
+  background: rgba(251, 146, 60, 0.1);
+  border: 1px solid rgba(251, 146, 60, 0.2);
+}
+
 /* Hover Effects */
 .info-card:hover {
   transform: translateY(-2px);
@@ -318,11 +330,6 @@ const isFavorite = (item: GridItem) => {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Nuevo estilo para la tarjeta del mapa */
-.card-orange {
-  background: rgba(251, 146, 60, 0.1);
-  border: 1px solid rgba(251, 146, 60, 0.2);
-}
 
 /* Ajuste del iframe para modo oscuro */
 @media (prefers-color-scheme: dark) {
