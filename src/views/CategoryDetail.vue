@@ -4,9 +4,20 @@
 		<base-layout :showBackButton="true" @back="goBack">
 			<ion-content :fullscreen="true" class="ion-padding-bottom">
 				<div class="category-detail" v-if="item">
-					<!-- Header Image with Parallax effect -->
+					<!-- Image Slider with Swiper -->
 					<div class="image-wrapper">
-						<img :src="item.image" :alt="$t(item.title)" class="header-image" />
+						<swiper
+							:modules="[Pagination, Autoplay]"
+							:pagination="{ clickable: true }"
+							:autoplay="{ delay: 5000, disableOnInteraction: false }"
+							:slidesPerView="1"
+							:slidesPerGroup="1"
+							class="image-swiper"
+						>
+							<swiper-slide v-for="(image, index) in imagesList" :key="index">
+								<img :src="image" :alt="$t(item.title)" class="header-image" />
+							</swiper-slide>
+						</swiper>
 						<div class="image-overlay"></div>
 						<ion-button
 							class="favorite-button"
@@ -65,6 +76,34 @@
 									></iframe>
 								</div>
 							</div>
+							<!-- Nueva tarjeta para el sitio web -->
+							<div v-if="item?.website" class="info-card card-blue">
+								<div class="card-header">
+									<ion-icon
+										:icon="globeOutline"
+										class="section-icon"
+									></ion-icon>
+									<h2>{{ $t("Common.website") }}</h2>
+								</div>
+								<p>{{ $t("Common.visit_website_description") }}</p>
+
+								<!-- Enlace mejorado -->
+								<a
+									:href="item.website"
+									target="_blank"
+									rel="noopener noreferrer"
+									class="website-link-button"
+								>
+									<ion-icon
+										:icon="globeOutline"
+										class="website-icon"
+									></ion-icon>
+									<span class="link-text">{{
+										$t(`${getItemId()}.title`)
+									}}</span>
+									<ion-icon :icon="openOutline" class="open-icon"></ion-icon>
+								</a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -72,26 +111,19 @@
 		</base-layout>
 	</ion-page>
 </template>
+
 <script setup lang="ts">
 import { computed } from "vue";
 import { useRoute } from "vue-router";
 import { car, footsteps, restaurant } from "ionicons/icons";
-import {
-	IonPage,
-	IonHeader,
-	IonToolbar,
-	IonTitle,
-	IonContent,
-	IonButtons,
-	IonBackButton,
-	IonButton,
-	IonIcon,
-} from "@ionic/vue";
+import { IonPage, IonContent, IonButton, IonIcon } from "@ionic/vue";
 import {
 	heart,
 	heartOutline,
 	locationOutline,
 	informationCircle,
+	globeOutline,
+	openOutline,
 } from "ionicons/icons";
 import { GridItem, CategoryType } from "@/types";
 import { useNavigationManager } from "@/utils/navigationManager";
@@ -100,6 +132,13 @@ import { viewpoints } from "@/data/viewpoints";
 import { beaches } from "@/data/beaches";
 import { museums } from "@/data/museums";
 import { restaurants } from "@/data/restaurants";
+
+// Import Swiper components
+import { Swiper, SwiperSlide } from "swiper/vue";
+import { Pagination, Autoplay } from "swiper/modules";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
 
 interface CategoryData {
 	data: GridItem[];
@@ -119,13 +158,13 @@ const categoryDataMap: CategoryDataMapType = {
 
 const { goBack } = useNavigationManager();
 const favoritesStore = useFavoritesStore();
+const route = useRoute();
 
 const getCategoryFromPath = (path: string): CategoryType | "" => {
 	const matches = path.match(/\/([^/]+)/);
 	return (matches ? matches[1] : "") as CategoryType | "";
 };
 
-const route = useRoute();
 const currentCategory = getCategoryFromPath(route.path);
 
 const defaultBackLink = computed(() => {
@@ -133,6 +172,28 @@ const defaultBackLink = computed(() => {
 		return categoryDataMap[currentCategory as CategoryType].backLink;
 	}
 	return "/all-options";
+});
+
+const item = computed(() => {
+	if (currentCategory && categoryDataMap[currentCategory as CategoryType]) {
+		const categoryData = categoryDataMap[currentCategory as CategoryType].data;
+		const id = route.params.id as string;
+		return categoryData.find((item) => item.route.endsWith(id));
+	}
+	return undefined;
+});
+
+// Get the list of images for the slider
+const imagesList = computed(() => {
+	if (item.value) {
+		// If item has multiple images defined, use them
+		if (item.value.images && item.value.images.length > 0) {
+			return item.value.images;
+		}
+		// Otherwise, fall back to the single image
+		return [item.value.image];
+	}
+	return [];
 });
 
 const getGoogleMapsUrl = computed(() => {
@@ -143,15 +204,6 @@ const getGoogleMapsUrl = computed(() => {
 		}&q=${lat},${lng}&zoom=15`;
 	}
 	return "";
-});
-
-const item = computed(() => {
-	if (currentCategory && categoryDataMap[currentCategory as CategoryType]) {
-		const categoryData = categoryDataMap[currentCategory as CategoryType].data;
-		const id = route.params.id as string;
-		return categoryData.find((item) => item.route.endsWith(id));
-	}
-	return undefined;
 });
 
 const capitalizeFirstLetter = (string: string) => {
@@ -174,15 +226,17 @@ const toggleFavorite = async (item: GridItem) => {
 		console.error("Error al gestionar favoritos:", error);
 	}
 };
+
 const getSectionIcon = (section: string) => {
 	const iconMap: { [key: string]: string } = {
 		parking: car,
 		access: footsteps,
 		services: restaurant,
 		tips: informationCircle,
-		recommended: heart,
+		recommended: restaurant,
 		points_of_interest: informationCircle,
 		location: locationOutline,
+		website: globeOutline,
 	};
 	return iconMap[section];
 };
@@ -196,6 +250,7 @@ const getCardClass = (section: string) => {
 		recommended: "card-orange",
 		points_of_interest: "card-green",
 		location: "card-purple",
+		website: "card-blue",
 	};
 	return classMap[section];
 };
@@ -212,11 +267,15 @@ const isFavorite = (item: GridItem) => {
 	overflow: hidden;
 }
 
+.image-swiper {
+	width: 100%;
+	height: 100%;
+}
+
 .header-image {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	transform: scale(1.1);
 	transition: transform 0.3s ease;
 }
 
@@ -227,6 +286,8 @@ const isFavorite = (item: GridItem) => {
 	right: 0;
 	height: 150px;
 	background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.6));
+	z-index: 10;
+	pointer-events: none;
 }
 
 .favorite-button {
@@ -241,6 +302,7 @@ const isFavorite = (item: GridItem) => {
 	--border-radius: 50%;
 	backdrop-filter: blur(10px);
 	-webkit-backdrop-filter: blur(10px);
+	z-index: 20;
 }
 
 .favorite-icon {
@@ -260,6 +322,25 @@ const isFavorite = (item: GridItem) => {
 	position: relative;
 	z-index: 10;
 	box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Ionic Slides pagination customizations */
+:deep(.swiper-pagination) {
+	position: absolute;
+	bottom: 60px !important;
+	z-index: 15;
+}
+
+:deep(.swiper-pagination-bullet) {
+	width: 8px;
+	height: 8px;
+	background: white;
+	opacity: 0.6;
+}
+
+:deep(.swiper-pagination-bullet-active) {
+	opacity: 1;
+	background: white;
 }
 
 .title-section {
@@ -353,6 +434,45 @@ const isFavorite = (item: GridItem) => {
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+.website-link-button {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 16px;
+	padding: 14px 18px;
+	background: #3b82f6;
+	color: white;
+	border-radius: 12px;
+	text-decoration: none;
+	font-weight: 500;
+	transition: all 0.2s ease;
+	box-shadow: 0 4px 6px rgba(59, 130, 246, 0.25);
+}
+
+.website-link-button:hover,
+.website-link-button:active {
+	background: #2563eb;
+	transform: translateY(-2px);
+	box-shadow: 0 6px 12px rgba(37, 99, 235, 0.3);
+}
+
+.website-icon {
+	font-size: 18px;
+	margin-right: 4px;
+}
+
+.link-text {
+	flex-grow: 1;
+	text-align: center;
+	font-size: 16px;
+}
+
+.open-icon {
+	font-size: 16px;
+	margin-left: 8px;
+	opacity: 0.7;
+}
+
 /* Ajuste del iframe para modo oscuro */
 @media (prefers-color-scheme: dark) {
 	.map-container {
@@ -372,6 +492,16 @@ const isFavorite = (item: GridItem) => {
 
 	.description {
 		color: var(--ion-color-medium);
+	}
+
+	.website-link-button {
+		background: #3b82f6;
+		color: white;
+	}
+
+	.website-link-button:hover,
+	.website-link-button:active {
+		background: #2563eb;
 	}
 }
 </style>
