@@ -1,4 +1,36 @@
 export default {
+	"playa-de-san-lorenzo": {
+		title: "Playa de San Lorenzo",
+		description:
+			"La Playa de San Lorenzo è la spiaggia urbana per eccellenza di Gijón e una delle più emblematiche delle Asturie. Con quasi 1,5 chilometri di lunghezza, questo ampio arenile di sabbia dorata forma una perfetta mezzaluna che abbraccia la baia di Gijón. Il suo carattere urbano, gli eccellenti servizi e la sua integrazione con il lungomare e la vita della città la rendono uno dei principali centri di attività sociale e ricreativa della città durante tutto l'anno, specialmente in estate.",
+		sections: {
+			location: {
+				title: "Posizione",
+				content:
+					"È situata nel cuore di Gijón, estendendosi dal Cerro de Santa Catalina fino alla foce del fiume Piles. È perfettamente accessibile da qualsiasi punto della città, sia a piedi che con i mezzi pubblici, con numerose linee di autobus che arrivano nelle sue vicinanze.",
+			},
+			parking: {
+				title: "Parcheggio",
+				content:
+					"Essendo una spiaggia urbana, non dispone di un parcheggio specifico, ma utilizza le zone di parcheggio urbano della città. Esistono varie zone di ORA (parcheggio regolamentato) nelle strade vicine e diversi parcheggi sotterranei a pagamento nei dintorni, come quello del Paseo de Begoña o quello della Plaza del Instituto. In estate il parcheggio può essere complicato, quindi si consiglia di utilizzare i mezzi pubblici.",
+			},
+			access: {
+				title: "Accesso",
+				content:
+					"Gli accessi alla spiaggia sono numerosi e comodi, con molteplici scale, rampe e passerelle distribuite lungo tutto il lungomare. La spiaggia dispone di vari punti di accesso adattati per persone con mobilità ridotta, incluse passerelle in legno che arrivano fino a vicino alla riva.",
+			},
+			services: {
+				title: "Servizi",
+				content:
+					"Offre tutti i servizi tipici di una spiaggia urbana di prima categoria: vigilanza e bagnini durante tutta la stagione balneare, docce, servizi igienici pubblici, lavapiedi, noleggio di ombrelloni e sdraio, e zone sportive con reti da pallavolo. Il lungomare è fiancheggiato da numerosi bar, ristoranti, gelaterie e negozi. Ha la distinzione di Bandiera Blu e dispone di aree specifiche per persone con mobilità ridotta con personale di supporto durante l'estate.",
+			},
+			tips: {
+				title: "Consigli",
+				content:
+					"La spiaggia cambia radicalmente con le maree, ampliandosi considerevolmente con la bassa marea, quando è possibile camminare fino alla Scalinata 16 (ultimo accesso della spiaggia). Il momento migliore per il bagno di solito è con l'alta marea o la marea media in salita. La zona del Piles (estremità est) è solitamente più tranquilla e familiare, mentre la zona centrale è più animata. Il lungomare offre un magnifico percorso con viste su tutta la baia, particolarmente consigliabile al tramonto. Durante l'estate ospita diverse attività culturali e sportive, come tornei di beach volley o scuole di surf.",
+			},
+		},
+	},
 	"playa-del-silencio": {
 		title: "Playa del Silencio",
 		description:
@@ -277,6 +309,262 @@ export default {
 				title: "Consigli",
 				content:
 					"Peñarronda è un eccellente posto per praticare il surf, specialmente per chi cerca un'atmosfera tranquilla lontano dalle spiagge più affollate. Se non sei un surfista, è consigliabile andare in spiaggia nelle prime ore del mattino o nel tardo pomeriggio per evitare la folla. Inoltre, le maree in questa zona possono variare, quindi è utile consultare gli orari delle maree prima di andare.",
+			},
+		},
+	},
+	"playa-del-aguilar": {
+		title: "Playa del Aguilar",
+		description:
+			"La Playa del Aguilar, situata nel comune di Muros de Nalón, è una delle spiagge più popolari delle Asturie. Con la sua sabbia dorata, le acque cristalline e le scogliere verdi che la circondano, è una destinazione ideale per chi cerca di godersi una giornata al mare in un ambiente naturale e ben curato.",
+		sections: {
+			location: {
+				title: "Posizione",
+				content:
+					"Si trova nel comune di Muros de Nalón, vicino alla località di Cudillero. La spiaggia è facilmente accessibile dalla strada locale AS-317.",
+			},
+			parking: {
+				title: "Parcheggio",
+				content:
+					"Dispone di un parcheggio gratuito vicino alla spiaggia, che facilita l'accesso a chi des idera godersi la zona. Tuttavia, nei mesi estivi può riempirsi rapidamente, quindi si consiglia di arrivare presto.",
+			},
+			access: {
+				title: "Accesso",
+				content:
+					"L'accesso è semplice, con una piccola discesa dal parcheggio alla sabbia. La spiaggia è circondata da scogliere verdi e offre una vista spettacolare sul mare.",
+			},
+			services: {
+				title: "Servizi",
+				content:
+					"La Playa del Aguilar dispone di docce, servizi igienici e bagnini durante l'alta stagione. Ci sono anche diversi bar e ristoranti nelle vicinanze dove si può gustare la gastronomia locale.",
+			},
+			tips: {
+				title: "Consigli",
+				content:
+					"Aguilar è una spiaggia molto popolare, quindi è consigliabile andare presto per trovare un buon posto. È anche un ottimo posto per praticare snorkeling e kayak, grazie alle sue acque cristalline e alla sua ricca fauna marina. Inoltre, le scogliere verdi che circondano la spiaggia offrono un'ottima opportunità per fare escursioni e godersi la natura.",
+			},
+		},
+	},
+	"playa-de-mexota": {
+		title: "Playa de Mexota",
+		description:
+			"La Playa de Mexota, situata nel comune di Tapia de Casariego, è una delle spiagge più selvagge e incontaminate delle Asturie. Con la sua sabbia dorata, le acque cristalline e le scogliere che la circondano, è un luogo ideale per chi cerca di godersi la natura in un ambiente tranquillo e poco affollato.",
+		sections: {
+			location: {
+				title: "Posizione",
+				content:
+					"Si trova nel comune di Tapia de Casariego, sulla costa occidentale delle Asturie, vicino al confine con la Galizia. La spiaggia è situata a circa 10 chilometri dalla località di Tapia ed è accessibile attraverso la strada locale AS-22.",
+			},
+			parking: {
+				title: "Parcheggio",
+				content:
+					"Dispone di un parcheggio gratuito vicino alla spiaggia, che facilita l'accesso a chi desire godersi la zona. Tuttavia, nei mesi estivi può riempirsi rapidamente, quindi si consiglia di arrivare presto.",
+			},
+			access: {
+				title: "Accesso",
+				content:
+					"L'accesso è semplice, con una piccola discesa dal parcheggio alla sabbia. La spiaggia è circondata da scogliere e offre una vista spettacolare sul mare.",
+			},
+			services: {
+				title: "Servizi",
+				content:
+					"La Playa de Mexota è una spiaggia selvaggia e non dispone di servizi come docce o bagni. Tuttavia, nei dintorni ci sono alcuni bar e ristoranti dove sipuò gustare la gastronomia locale.",
+			},
+			tips: {
+				title: "Consigli",
+				content:
+					"Mexota è una spiaggia molto tranquilla e poco affollata, ideale per chi cerca un luogo per rilassarsi e godersi la natura. Si consiglia di portare tutto il necessario per la permanenza in spiaggia, come acqua e cibo, e di rispettare l'ambiente, raccogliendo tutti i rifiuti per mantenere la spiaggia nel suo stato naturale.",
+			},
+		},
+	},
+	"playa-de-porcia": {
+		title: "Playa de Porcia",
+		description:
+			"La Playa de Porcia, situata nel comune di El Franco, è una delle spiagge più belle e selvagge delle Asturie. Con la sua sabbia dorata, le acque cristalline e le scogliere che la circondano, è un luogo ideale per chi cerca di godersi la natura in un ambiente tranquillo e poco affollato.",
+		sections: {
+			location: {
+				title: "Posizione",
+				content:
+					"Si trova nel comune di El Franco, sulla costa occidentale delle Asturie. La spiaggia è situata a circa 10 chilometri dalla località di Tapia de Casariego ed è accessibile attraverso la strada locale AS-22.",
+			},
+			parking: {
+				title: "Parcheggio",
+				content:
+					"Dispone di un parcheggio gratuito vicino alla spiaggia, che facilita l'accesso a chi desire godersi la zona. Tuttavia, nei mesi estivipuò riempirsi rapidamente, quindi si consiglia di arrivare presto.",
+			},
+			access: {
+				title: "Accesso",
+				content:
+					"L'accesso è semplice, con una piccola discesa dal parcheggio alla sabbia. La spiaggia è circondata da scogliere e offre una vista spettacolare sul mare.",
+			},
+			services: {
+				title: "Servizi",
+				content:
+					"La Playa de Porcia è una spiaggia selvaggia e non dispone di servizi come docce o bagni. Tuttavia, nei dintorni ci sono alcuni bar e ristoranti dove sipuò gustare la gastronomia locale.",
+			},
+			tips: {
+				title: "Consigli",
+				content:
+					"Porcia è una spiaggia molto tranquilla e poco affollata, ideale per chi cerca un luogo per rilassarsi e godersi la natura. Si consiglia di portare tutto il necessario per la permanenza in spiaggia, come acqua e cibo, e di rispettare l'ambiente, raccogliendo tutti i rifiuti per mantenere la spiaggia nel suo stato naturale.",
+			},
+		},
+	},
+	"playa-de-verdicio": {
+		title: "Playa de Verdicio",
+		description:
+			"La Playa de Verdicio, situata nel comune di Gozón, è una delle spiagge più belle e selvagge delle Asturie. Con la sua sabbia dorata, le acque cristalline e le scogliere che la circondano, è un luogo ideale per chi cerca di godersi la natura in un ambiente tranquillo e poco affollato.",
+		sections: {
+			location: {
+				title: "Posizione",
+				content:
+					"Si trova nel comune di Gozón, vicino alla località di Luanco. La spiaggia è facilmente accessibile dalla strada locale AS-239.",
+			},
+			parking: {
+				title: "Parcheggio",
+				content:
+					"Dispone di un parcheggio gratuito vicino alla spiaggia, che facilita l'accesso a chi des edera godersi la zona. Tuttavia, nei mesi estivi può riempirsi rapidamente, quindi si consiglia di arrivare presto.",
+			},
+			access: {
+				title: "Accesso",
+				content:
+					"L'accesso è semplice, con una piccola discesa dal parcheggio alla sabbia. La spiaggia è circondata da scogliere e offre una vista spettacolare sul mare.",
+			},
+			services: {
+				title: "Servizi",
+				content:
+					"La Playa de Verdicio è una spiaggia selvaggia e non dispone di servizi come docce o bagni. Tuttavia, nei dintorni ci sono alcuni bar e ristoranti dove sipuò gustare la gastronomia locale.",
+			},
+			tips: {
+				title: "Consigli",
+				content:
+					"Verdicio è una spiaggia molto tranquilla e poco affollata, ideale per chi cerca un luogo per rilassarsi e godersi la natura. Si consiglia di portare tutto il necessario per la permanenza in spiaggia, come acqua e cibo, e di rispettare l'ambiente, raccogliendo tutti i rifiuti per mantenere la spiaggia nel suo stato naturale.",
+			},
+		},
+		"playa-de-cadavedo": {
+			title: "Playa de Cadavedo",
+			description:
+				"La Playa de Cadavedo, situata nel comune di Valdés, è una delle spiagge più belle e tranquille delle Asturie. Con la sua sabbia dorata, le acque cristalline e le scogliere che la circondano, è un luogo ideale per chi cerca di godersi la natura in un ambiente incontaminato e poco affollato.",
+			sections: {
+				location: {
+					title: "Posizione",
+					content:
+						"Si trova nel comune di Valdés, vicino alla località di Cadavedo. La spiaggia è facilmente accessibile dalla strada locale AS-238.",
+				},
+				parking: {
+					title: "Parcheggio",
+					content:
+						"Dispone di un parcheggio gratuito vicino alla spiaggia, che facilita l'accesso a chi desidera godersi la zona. Tuttavia, nei mesi estivi può riempirsi rapidamente, quindi si consiglia di arrivare presto.",
+				},
+				access: {
+					title: "Accesso",
+					content:
+						"L'accesso è semplice, con una piccola discesa dal parcheggio alla sabbia. La spiaggia è circondata da scogliere e offre una vista spettacolare sul mare.",
+				},
+				services: {
+					title: "Servizi",
+					content:
+						"La Playa de Cadavedo è una spiaggia tranquilla e poco affollata, ideale per chi cerca un luogo per rilassarsi e godersi la natura. Tuttavia, non dispone di servizi come docce o bagni. Nei dintorni ci sono alcuni bar e ristoranti dove si può gustare la gastronomia locale.",
+				},
+				tips: {
+					title: "Consigli",
+					content:
+						"Cadavedo è una spiaggia molto tranquilla e poco affollata, ideale per chi cerca un luogo per rilassarsi e godersi la natura. Si consiglia di portare tutto il necessario per la permanenza in spiaggia, come acqua e cibo, e di rispettare l'ambiente, raccogliendo tutti i rifiuti per mantenere la spiaggia nel suo stato naturale.",
+				},
+			},
+		},
+	},
+	"playa-de-cue": {
+		title: "Playa de Cué",
+		description:
+			"La Playa de Cué è una piccola e incantevole baia situata nel comune di Llanes, sulla costa orientale delle Asturie. Con una lunghezza di circa 150 metri, questa spiaggia di sabbia dorata è caratterizzata dal suo ambiente naturale semi-urbano, acque cristalline e il pittoresco porto peschereccio di Cué che la costeggia, offrendo un paesaggio tipicamente asturiano dove si combinano mare, montagna e architettura tradizionale.",
+		sections: {
+			location: {
+				title: "Posizione",
+				content:
+					"Si trova nella località di Cué, a circa 3 chilometri da Llanes in direzione ovest. Si accede dalla N-634 o dall'A-8, prendendo la deviazione verso Cué e seguendo le indicazioni per il porto e la spiaggia.",
+			},
+			parking: {
+				title: "Parcheggio",
+				content:
+					"Dispone di un piccolo parcheggio gratuito vicino al porto con capacità limitata per circa 20-25 veicoli. In alta stagione si riempie rapidamente, essendo possibile parcheggiare nelle strade del paese, sempre rispettando la segnaletica.",
+			},
+			access: {
+				title: "Accesso",
+				content:
+					"L'accesso alla spiaggia è semplice e comodo, attraverso un sentiero pavimentato che costeggia il porto e arriva direttamente alla sabbia. È relativamente accessibile per persone con mobilità ridotta, anche se non dispone di passerelle specifiche.",
+			},
+			services: {
+				title: "Servizi",
+				content:
+					"È una spiaggia con servizi di base durante la stagione estiva: vigilanza, docce e cestini per i rifiuti. Non ci sono chioschi sulla spiaggia stessa, ma nel paese di Cué, a pochi metri, ci sono diversi bar e ristoranti dove si può gustare la gastronomia locale, specialmente pesce fresco e frutti di mare.",
+			},
+			tips: {
+				title: "Consigli",
+				content:
+					"Questa spiaggia è ideale per le famiglie grazie alle sue acque tranquille e al facile accesso. Le maree influenzano significativamente le dimensioni della sabbia, consigliando la visita con marea bassa o media. Dal molo del porto si ottengono belle viste della spiaggia e delle scogliere circostanti. La vicina cittadina di Llanes, con il suo centro storico e la sua vivace atmosfera, completa perfettamente la visita a questa spiaggia.",
+			},
+		},
+	},
+	"playa-de-salinas": {
+		title: "Playa de Salinas",
+		description:
+			"La Playa de Salinas è una delle spiagge più estese e popolari delle Asturie, situata nel comune di Castrillón. Con più di 2 chilometri di lunghezza, questo impressionante arenile di sabbia fine e dorata si distingue per il suo ambiente semi-urbano, le sue eccellenti onde per la pratica del surf e la sua animata atmosfera durante tutto l'anno. Considerata la culla del surf nelle Asturie dagli anni '60, Salinas combina perfettamente servizi urbani con spazi naturali di grande valore ecologico, come le dune e le paludi che la circondano.",
+		sections: {
+			location: {
+				title: "Posizione",
+				content:
+					"Si trova nella località di Salinas, appartenente al comune di Castrillón, a circa 5 chilometri da Avilés e approssimativamente 25 chilometri da Gijón. È facilmente accessibile dalla N-632 o dall'A-8 prendendo l'uscita verso Piedras Blancas/Salinas.",
+			},
+			parking: {
+				title: "Parcheggio",
+				content:
+					"Dispone di varie zone di parcheggio gratuito distribuite lungo la spiaggia. La principale è un ampio spazio accanto al Museo delle Ancore, con capacità per numerosi veicoli. In alta stagione questi parcheggi solitamente si riempiono, esistendo anche zone di sosta nelle strade adiacenti del paese, alcune delle quali a pagamento in estate.",
+			},
+			access: {
+				title: "Accesso",
+				content:
+					"Gli accessi alla spiaggia sono molteplici e ben attrezzati. Il principale si realizza attraverso il lungomare che percorre tutta la lunghezza dell'arenile, con numerose rampe e scale. Dispone di vari punti di accesso adattati per persone con mobilità ridotta, con passerelle in legno che facilitano l'arrivo fino a vicino alla riva.",
+			},
+			services: {
+				title: "Servizi",
+				content:
+					"Offre servizi completi durante tutto l'anno, intensificati nella stagione estiva: vigilanza e bagnini, docce, servizi igienici pubblici, lavapiedi, noleggio di ombrelloni e sdraio. Il lungomare è fiancheggiato da numerosi bar, ristoranti e negozi. È particolarmente riconosciuta per le sue scuole di surf e servizi di noleggio di materiale per sport acquatici. Ha la distinzione di Bandiera Blu per la qualità delle sue acque e servizi.",
+			},
+			tips: {
+				title: "Consigli",
+				content:
+					"La spiaggia si trasforma notevolmente con le maree, essendo molto più ampia durante la bassa marea. Per il bagno tranquillo è consigliabile la zona est (vicina al paese), mentre la zona ovest (vicina al Museo delle Ancore) solitamente ha migliori onde per il surf. Il lungomare e la visita al Museo delle Ancore all'aria aperta sono attività complementari molto raccomandate. La zona delle dune è protetta, quindi è importante rispettare le passerelle abilitate. I tramonti a Salinas sono spettacolari, specialmente dal faro o dalle terrazze del lungomare.",
+			},
+		},
+	},
+	"playa-de-la-ñora": {
+		title: "Playa de La Ñora",
+		description:
+			"La Playa de La Ñora è una bellissima baia situata tra i comuni di Gijón e Villaviciosa, sulla costa centrale delle Asturie. Con circa 300 metri di lunghezza, questa spiaggia di sabbia dorata e fine è caratterizzata dall'essere divisa dalla foce del fiume Ñora, che crea un piccolo estuario di grande valore ecologico. Circondata da scogliere e vegetazione, offre un ambiente naturale di grande bellezza che combina mare, fiume e campagna, essendo molto apprezzata sia dai bagnanti che dai surfisti per la qualità delle sue onde.",
+		sections: {
+			location: {
+				title: "Posizione",
+				content:
+					"Si trova al confine tra i comuni di Gijón e Villaviciosa, a circa 10 chilometri a est di Gijón e 8 chilometri da Villaviciosa. Si accede dalla N-632 o dall'A-8, prendendo la deviazione segnalata verso La Ñora. È molto vicina ad altre spiagge conosciute come España o Merón.",
+			},
+			parking: {
+				title: "Parcheggio",
+				content:
+					"Dispone di un parcheggio gratuito nella parte superiore della scogliera, con capacità per circa 50-60 veicoli. In alta stagione, specialmente nei fine settimana e nei giorni festivi, può riempirsi rapidamente. Esiste una zona aggiuntiva di parcheggio un po' più lontana, seguendo la strada verso Villaviciosa, che può essere un'alternativa quando il parcheggio principale è completo.",
+			},
+			access: {
+				title: "Accesso",
+				content:
+					"L'accesso principale alla spiaggia si realizza attraverso una scala di cemento che scende dal parcheggio fino alla sabbia. Non è una spiaggia particolarmente accessibile per persone con mobilità ridotta a causa di queste scale. Per attraversare da un lato all'altro del fiume è necessario guadarlo, cosa possibile solo con la bassa marea e quando la portata del fiume lo permette.",
+			},
+			services: {
+				title: "Servizi",
+				content:
+					"Durante la stagione estiva dispone di servizio di bagnini, docce e servizi igienici pubblici. Ha un piccolo chiosco che offre bevande e cibi semplici durante l'estate. Non c'è servizio di noleggio di ombrelloni o sdraio. Nelle vicinanze, nella località di La Ñora, ci sono vari ristoranti e sidrerie dove si può gustare la gastronomia tradizionale asturiana.",
+			},
+			tips: {
+				title: "Consigli",
+				content:
+					"La spiaggia cambia drasticamente con le maree, essendo molto più estesa durante la bassa marea, momento ideale per esplorare piccole grotte nelle scogliere circostanti. È un buon posto per la pratica del surf, specialmente nella zona più vicina alle scogliere. L'estuario che forma il fiume crea zone di acqua più tranquilla, ideali per i bambini, anche se sempre sotto sorveglianza a causa delle possibili correnti. Il percorso costiero che collega con le spiagge vicine offre una piacevole passeggiata con viste spettacolari. Per gli appassionati di fotografia, i tramonti a La Ñora sono particolarmente fotogenici quando il sole tramonta sul mare, con il fiume e le scogliere in primo piano.",
 			},
 		},
 	},

@@ -1,4 +1,36 @@
 export default {
+	"playa-de-san-lorenzo": {
+		title: "San Lorenzo Beach",
+		description:
+			"San Lorenzo Beach is the most famous beach in Gijón, Asturias. This urban beach is characterized by its golden sand, crystal-clear waters, and the promenade that runs along its entire length. It is a popular destination for locals and tourists alike, offering a wide range of services and facilities to ensure a pleasant day at the seaside.",
+		sections: {
+			location: {
+				title: "Location",
+				content:
+					"San Lorenzo Beach is located in the heart of Gijón, near the city center. It is easily accessible by car, bus, or on foot, and has a large parking area near the beach.",
+			},
+			parking: {
+				title: "Parking",
+				content:
+					"There are several paid parking lots near the beach, making it easy to access. In high season, these parking lots can fill up quickly, so it is recommended to arrive early.",
+			},
+			access: {
+				title: "Access",
+				content:
+					"The beach is easily accessible on foot from the city center. There is a promenade that runs along the entire length of the beach, making it convenient for visitors.",
+			},
+			services: {
+				title: "Services",
+				content:
+					"San Lorenzo Beach offers a wide range of services, including lifeguards, showers, toilets, and beach bars. It is an ideal beach for families, as it has all the necessary facilities to ensure a comfortable day at the seaside.",
+			},
+			tips: {
+				title: "Tips",
+				content:
+					"Due to its popularity, San Lorenzo Beach can get crowded in high season. It is recommended to arrive early to secure a good spot on the beach. Additionally, the beach is surrounded by a variety of restaurants and bars, making it a great place to enjoy local cuisine.",
+			},
+		},
+	},
 	"playa-del-silencio": {
 		title: "Playa del Silencio",
 		description:
@@ -277,6 +309,262 @@ export default {
 				title: "Tips",
 				content:
 					"Due to its popularity, Playa de Peñarronda can get crowded in high season. It is recommended to arrive early to secure a good spot on the beach. Additionally, the beach is surrounded by stunning cliffs and natural landscapes, making it a great place for hiking and exploring the area.",
+			},
+		},
+	},
+	"playa-del-aguilar": {
+		title: "Playa del Aguilar",
+		description:
+			"Playa del Aguilar is a beautiful beach located in the council of Muros de Nalón, Asturias. This sandy cove is characterized by its fine golden sand, crystal-clear waters, and stunning views of the Cantabrian Sea. It is an ideal beach for families and offers a wide range of services and facilities to ensure a pleasant day at the seaside.",
+		sections: {
+			location: {
+				title: "Location",
+				content:
+					"Playa del Aguilar is located near the town of Muros de Nalón, in the council of Muros de Nalón. It is easily accessible by car and has a large parking area near the beach.",
+			},
+			parking: {
+				title: "Parking",
+				content:
+					"There is a large free parking lot near the beach, making it easy to access. In high season, this parking lot can fill up quickly, so it is recommended to arrive early.",
+			},
+			access: {
+				title: "Access",
+				content:
+					"The beach is easily accessible on foot from the parking lot. There is a wooden walkway that leads directly to the sand, making it convenient for families with strollers or people with reduced mobility.",
+			},
+			services: {
+				title: "Services",
+				content:
+					"Playa del Aguilar offers a wide range of services, including lifeguards, showers, toilets, and beach bars. It is an ideal beach for families, as it has all the necessary facilities to ensure a comfortable day at the seaside.",
+			},
+			tips: {
+				title: "Tips",
+				content:
+					"Due to its popularity, Playa del Aguilar can get crowded in high season. It is recommended to arrive early to secure a good spot on the beach. Additionally, the beach is surrounded by stunning cliffs and natural landscapes, making it a great place for hiking and exploring the area.",
+			},
+		},
+	},
+	"playa-de-mexota": {
+		title: "Playa de Mexota",
+		description:
+			"Playa de Mexota is a hidden gem located in the council of Tapia de Casariego, Asturias. This small cove is characterized by its crystal-clear turquoise waters, golden sand, and impressive cliffs. It is an ideal beach for snorkeling, swimming, and exploring the natural caves that give it its name.",
+		sections: {
+			location: {
+				title: "Location",
+				content:
+					"Playa de Mexota is located near the town of Tapia de Casariego, in the council of Tapia de Casariego. It is easily accessible by car and has a small parking area near the beach.",
+			},
+			parking: {
+				title: "Parking",
+				content:
+					"There is a small free parking area near the beach, making it easy to access. In high season, this parking area can fill up quickly, so it is recommended to arrive early.",
+			},
+			access: {
+				title: "Access",
+				content:
+					"The beach is easily accessible on foot from the parking area. There is a short path that leads directly to the sand, making it convenient for visitors.",
+			},
+			services: {
+				title: "Services",
+				content:
+					"Playa de Mexota is a natural area without services such as showers, toilets, or beach bars. It is recommended to bring everything you need for your stay at the beach and to respect the environment, picking up all waste to keep the beach in its natural state.",
+			},
+			tips: {
+				title: "Tips",
+				content:
+					"Due to its small size, Playa de Mexota can get crowded in high season. It is recommended to arrive early to secure a good spot on the beach. Additionally, the beach is surrounded by stunning cliffs and natural caves, making it a great place for snorkeling and exploring the area.",
+			},
+		},
+	},
+	"playa-de-porcia": {
+		title: "Playa de Porcia",
+		description:
+			"Playa de Porcia is a beautiful beach located in the council of El Franco, Asturias. This sandy cove is characterized by its fine golden sand, crystal-clear waters, and stunning views of the Cantabrian Sea. It is an ideal beach for families and offers a wide range of services and facilities to ensure a pleasant day at the seaside.",
+		sections: {
+			location: {
+				title: "Location",
+				content:
+					"Playa de Porcia is located near the town of Tapia de Casariego, in the council of El Franco. It is easily accessible by car and has a large parking area near the beach.",
+			},
+			parking: {
+				title: "Parking",
+				content:
+					"There is a large free parking lot near the beach, making it easy to access. In high season, this parking lot can fill up quickly, so it is recommended to arrive early.",
+			},
+			access: {
+				title: "Access",
+				content:
+					"The beach is easily accessible on foot from the parking lot. There is a wooden walkway that leads directly to the sand, making it convenient for families with strollers or people with reduced mobility.",
+			},
+			services: {
+				title: "Services",
+				content:
+					"Playa de Porcia offers a wide range of services, including lifeguards, showers, toilets, and beach bars. It is an ideal beach for families, as it has all the necessary facilities to ensure a comfortable day at the seaside.",
+			},
+			tips: {
+				title: "Tips",
+				content:
+					"Due to its popularity, Playa de Porcia can get crowded in high season. It is recommended to arrive early to secure a good spot on the beach. Additionally, the beach is surrounded by stunning cliffs and natural landscapes, making it a great place for hiking and exploring the area.",
+			},
+		},
+	},
+	"playa-de-verdicio": {
+		title: "Playa de Verdicio",
+		description:
+			"Playa de Verdicio is a beautiful beach located in the council of Gozón, Asturias. This sandy cove is characterized by its fine golden sand, crystal-clear waters, and stunning views of the Cantabrian Sea. It is an ideal beach for families and offers a wide range of services and facilities to ensure a pleasant day at the seaside.",
+		sections: {
+			location: {
+				title: "Location",
+				content:
+					"Playa de Verdicio is located near the town of Luanco, in the council of Gozón. It is easily accessible by car and has a large parking area near the beach.",
+			},
+			parking: {
+				title: "Parking",
+				content:
+					"There is a large free parking lot near the beach, making it easy to access. In high season, this parking lot can fill up quickly, so it is recommended to arrive early.",
+			},
+			access: {
+				title: "Access",
+				content:
+					"The beach is easily accessible on foot from the parking lot. There is a wooden walkway that leads directly to the sand, making it convenient for families with strollers or people with reduced mobility.",
+			},
+			services: {
+				title: "Services",
+				content:
+					"Playa de Verdicio offers a wide range of services, including lifeguards, showers, toilets, and beach bars. It is an ideal beach for families, as it has all the necessary facilities to ensure a comfortable day at the seaside.",
+			},
+			tips: {
+				title: "Tips",
+				content:
+					"Due to its popularity, Playa de Verdicio can get crowded in high season. It is recommended to arrive early to secure a good spot on the beach. Additionally, the beach is surrounded by stunning cliffs and natural landscapes, making it a great place for hiking and exploring the area.",
+			},
+		},
+	},
+	"playa-de-cadavedo": {
+		title: "Playa de Cadavedo",
+		description:
+			"Playa de Cadavedo is a beautiful beach located in the council of Valdés, Asturias. This sandy cove is characterized by its fine golden sand, crystal-clear waters, and stunning views of the Cantabrian Sea. It is an ideal beach for families and offers a wide range of services and facilities to ensure a pleasant day at the seaside.",
+		sections: {
+			location: {
+				title: "Location",
+				content:
+					"Playa de Cadavedo is located near the town of Cadavedo, in the council of Valdés. It is easily accessible by car and has a large parking area near the beach.",
+			},
+			parking: {
+				title: "Parking",
+				content:
+					"There is a large free parking lot near the beach, making it easy to access. In high season, this parking lot can fill up quickly, so it is recommended to arrive early.",
+			},
+			access: {
+				title: "Access",
+				content:
+					"The beach is easily accessible on foot from the parking lot. There is a wooden walkway that leads directly to the sand, making it convenient for families with strollers or people with reduced mobility.",
+			},
+			services: {
+				title: "Services",
+				content:
+					"Playa de Cadavedo offers a wide range of services, including lifeguards, showers, toilets, and beach bars. It is an ideal beach for families, as it has all the necessary facilities to ensure a comfortable day at the seaside.",
+			},
+			tips: {
+				title: "Tips",
+				content:
+					"Due to its popularity, Playa de Cadavedo can get crowded in high season. It is recommended to arrive early to secure a good spot on the beach. Additionally, the beach is surrounded by stunning cliffs and natural landscapes, making it a great place for hiking and exploring the area.",
+			},
+		},
+	},
+	"playa-de-cue": {
+		title: "Playa de Cue",
+		description:
+			"Playa de Cue is a beautiful beach located in the council of Llanes, Asturias. This sandy cove is characterized by its fine golden sand, crystal-clear waters, and stunning views of the Cantabrian Sea. It is an ideal beach for families and offers a wide range of services and facilities to ensure a pleasant day at the seaside.",
+		sections: {
+			location: {
+				title: "Location",
+				content:
+					"Playa de Cue is located near the town of Llanes, in the council of Llanes. It is easily accessible by car and has a large parking area near the beach.",
+			},
+			parking: {
+				title: "Parking",
+				content:
+					"There is a large free parking lot near the beach, making it easy to access. In high season, this parking lot can fill up quickly, so it is recommended to arrive early.",
+			},
+			access: {
+				title: "Access",
+				content:
+					"The beach is easily accessible on foot from the parking lot. There is a wooden walkway that leads directly to the sand, making it convenient for families with strollers or people with reduced mobility.",
+			},
+			services: {
+				title: "Services",
+				content:
+					"Playa de Cue offers a wide range of services, including lifeguards, showers, toilets, and beach bars. It is an ideal beach for families, as it has all the necessary facilities to ensure a comfortable day at the seaside.",
+			},
+			tips: {
+				title: "Tips",
+				content:
+					"Due to its popularity, Playa de Cue can get crowded in high season. It is recommended to arrive early to secure a good spot on the beach. Additionally, the beach is surrounded by stunning cliffs and natural landscapes, making it a great place for hiking and exploring the area.",
+			},
+		},
+	},
+	"playa-de-salinas": {
+		title: "Salinas Beach",
+		description:
+			"Salinas Beach is one of the most famous beaches in Asturias, located in the council of Castrillón. This urban beach is characterized by its fine golden sand, crystal-clear waters, and the promenade that runs along its entire length. It is a popular destination for surfers, families, and tourists, offering a wide range of services and facilities to ensure a pleasant day at the seaside.",
+		sections: {
+			location: {
+				title: "Location",
+				content:
+					"Salinas Beach is located near the town of Salinas, in the council of Castrillón. It is easily accessible by car and has a large parking area near the beach.",
+			},
+			parking: {
+				title: "Parking",
+				content:
+					"There is a large free parking lot near the beach, making it easy to access. In high season, this parking lot can fill up quickly, so it is recommended to arrive early.",
+			},
+			access: {
+				title: "Access",
+				content:
+					"The beach is easily accessible on foot from the parking lot. There is a wooden walkway that leads directly to the sand, making it convenient for families with strollers or people with reduced mobility.",
+			},
+			services: {
+				title: "Services",
+				content:
+					"Salinas Beach offers a wide range of services, including lifeguards, showers, toilets, and beach bars. It is an ideal beach for families, as it has all the necessary facilities to ensure a comfortable day at the seaside.",
+			},
+			tips: {
+				title: "Tips",
+				content:
+					"Due to its popularity, Salinas Beach can get crowded in high season. It is recommended to arrive early to secure a good spot on the beach. Additionally, the beach is surrounded by a variety of restaurants and bars, making it a great place to enjoy local cuisine.",
+			},
+		},
+	},
+	"playa-de-la-ñora": {
+		title: "La Ñora Beach",
+		description:
+			"La Ñora Beach is a beautiful beach located in the council of Gijón, Asturias. This sandy cove is characterized by its fine golden sand, crystal-clear waters, and stunning views of the Cantabrian Sea. It is an ideal beach for families and offers a wide range of services and facilities to ensure a pleasant day at the seaside.",
+		sections: {
+			location: {
+				title: "Location",
+				content:
+					"La Ñora Beach is located near the town of La Ñora, in the council of Gijón. It is easily accessible by car and has a large parking area near the beach.",
+			},
+			parking: {
+				title: "Parking",
+				content:
+					"There is a large free parking lot near the beach, making it easy to access. In high season, this parking lot can fill up quickly, so it is recommended to arrive early.",
+			},
+			access: {
+				title: "Access",
+				content:
+					"The beach is easily accessible on foot from the parking lot. There is a wooden walkway that leads directly to the sand, making it convenient for families with strollers or people with reduced mobility.",
+			},
+			services: {
+				title: "Services",
+				content:
+					"La Ñora Beach offers a wide range of services, including lifeguards, showers, toilets, and beach bars. It is an ideal beach for families, as it has all the necessary facilities to ensure a comfortable day at the seaside.",
+			},
+			tips: {
+				title: "Tips",
+				content:
+					"Due to its popularity, La Ñora Beach can get crowded in high season. It is recommended to arrive early to secure a good spot on the beach. Additionally, the beach is surrounded by stunning cliffs and natural landscapes, making it a great place for hiking and exploring the area.",
 			},
 		},
 	},
