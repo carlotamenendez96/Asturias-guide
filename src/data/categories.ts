@@ -46,9 +46,9 @@ export const baseCategories: GridItem[] = [
 		route: "/alojamientos",
 	},
 	{
-		title: "Home.categories.vehicles",
-		image: "/src/assets/img/vehiculos.webp",
-		route: "/vehiculos",
+		title: "Home.categories.routes",
+		image: "https://i.imgur.com/BWAMoKn.jpeg",
+		route: "/routes",
 	},
 	{
 		title: "Home.categories.camping",

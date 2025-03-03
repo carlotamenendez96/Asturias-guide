@@ -13,6 +13,12 @@ export const beaches: GridItem[] = [
 	{
 		title: "Beaches.playa-del-silencio.title",
 		image: "/src/assets/img/playas/playadelsilencio.webp",
+		images: [
+			"/src/assets/img/playas/playadelsilencio.webp",
+			"https://i.imgur.com/2gFMcCu.jpeg",
+			"https://i.imgur.com/VkFxzII.jpeg",
+			"https://i.imgur.com/5gv479b.jpeg",
+		],
 		route: "/beaches/playa-del-silencio",
 		sections: ["parking", "access", "services"],
 		location: {
@@ -23,6 +29,10 @@ export const beaches: GridItem[] = [
 	{
 		title: "Beaches.playa-de-gulpiyuri.title",
 		image: "https://i.imgur.com/rZsIuR1.jpeg",
+		images: [
+			"https://i.imgur.com/rZsIuR1.jpeg",
+			"https://i.imgur.com/jzhnGhM.jpeg",
+		],
 		route: "/beaches/playa-de-gulpiyuri",
 		sections: ["parking", "access", "services", "tips"],
 		location: {
@@ -72,7 +82,7 @@ export const beaches: GridItem[] = [
 	},
 	{
 		title: "Beaches.playa-de-cuevas-de-mar.title",
-		image: "https://imgur.com/q3iRWqJ.jpeg",
+		image: "https://i.imgur.com/6EsutHG.jpeg",
 		route: "/beaches/playa-de-cuevas-de-mar",
 		sections: ["parking", "access", "services", "tips"],
 		location: {
