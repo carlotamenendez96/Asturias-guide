@@ -73,6 +73,16 @@ const routes: Array<RouteRecordRaw> = [
 				component: () => import("@/views/CategoryDetail.vue"),
 				props: true,
 			},
+			{
+				path: "/municipal",
+				component: () => import("@/views/CategoryList.vue"),
+				props: { categoryType: "municipal" },
+			},
+			{
+				path: "/municipal/:id",
+				component: () => import("@/views/CategoryDetail.vue"),
+				props: true,
+			},
 			// Añadir más rutas de categorías aquí...
 		],
 	},

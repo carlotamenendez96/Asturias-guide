@@ -11,4 +11,9 @@ export interface GridItem {
 	website?: string;
 }
 
-export type CategoryType = "viewpoints" | "beaches" | "museos" | "restaurants";
+export type CategoryType =
+	| "viewpoints"
+	| "beaches"
+	| "museos"
+	| "restaurants"
+	| "municipal";

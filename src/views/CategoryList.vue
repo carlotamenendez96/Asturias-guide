@@ -33,6 +33,7 @@ import { viewpoints } from "@/data/viewpoints";
 import { beaches } from "@/data/beaches";
 import { museums } from "@/data/museums";
 import { restaurants } from "@/data/restaurants";
+import { municipal } from "@/data/municipal";
 
 const props = defineProps<{
 	categoryType: string;
@@ -46,6 +47,7 @@ const categoryMap: { [key: string]: GridItem[] } = {
 	beaches: beaches,
 	museos: museums,
 	restaurants: restaurants,
+	municipal: municipal,
 };
 
 const categoryItems = computed(() => {

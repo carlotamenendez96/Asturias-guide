@@ -132,6 +132,7 @@ import { viewpoints } from "@/data/viewpoints";
 import { beaches } from "@/data/beaches";
 import { museums } from "@/data/museums";
 import { restaurants } from "@/data/restaurants";
+import { municipal } from "@/data/municipal";
 
 // Import Swiper components
 import { Swiper, SwiperSlide } from "swiper/vue";
@@ -154,6 +155,7 @@ const categoryDataMap: CategoryDataMapType = {
 	beaches: { data: beaches, backLink: "/beaches" },
 	museos: { data: museums, backLink: "/museos" },
 	restaurants: { data: restaurants, backLink: "/restaurants" },
+	municipal: { data: municipal, backLink: "/municipal" },
 };
 
 const { goBack } = useNavigationManager();

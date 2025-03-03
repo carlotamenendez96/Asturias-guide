@@ -2,6 +2,7 @@ import Home from "./en/home";
 import Beaches from "./en/beaches";
 import Viewpoints from "./en/viewpoints";
 import Restaurants from "./en/restaurants";
+import Municipal from "./en/municipal";
 import Common from "./en/common";
 
 export default {
@@ -9,5 +10,6 @@ export default {
 	Beaches,
 	Viewpoints,
 	Restaurants,
+	Municipal,
 	Common,
 };
