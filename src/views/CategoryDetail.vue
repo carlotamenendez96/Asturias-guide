@@ -36,7 +36,10 @@
 					<div class="content-card">
 						<div class="title-section">
 							<h1>{{ $t(`${getItemId()}.title`) }}</h1>
-							<p class="description">{{ $t(`${getItemId()}.description`) }}</p>
+							<p
+								class="description"
+								v-html="$t(`${getItemId()}.description`)"
+							></p>
 						</div>
 
 						<!-- Sections with Modern Cards -->
@@ -54,7 +57,10 @@
 									></ion-icon>
 									<h2>{{ $t(`${getItemId()}.sections.${section}.title`) }}</h2>
 								</div>
-								<p>{{ $t(`${getItemId()}.sections.${section}.content`) }}</p>
+
+								<p
+									v-html="$t(`${getItemId()}.sections.${section}.content`)"
+								></p>
 							</div>
 							<div v-if="item?.location" class="info-card card-orange">
 								<div class="card-header">
@@ -124,6 +130,10 @@ import {
 	informationCircle,
 	globeOutline,
 	openOutline,
+	sunnyOutline,
+	pricetags,
+	moon,
+	location,
 } from "ionicons/icons";
 import { GridItem, CategoryType } from "@/types";
 import { useNavigationManager } from "@/utils/navigationManager";
@@ -239,6 +249,12 @@ const getSectionIcon = (section: string) => {
 		points_of_interest: informationCircle,
 		location: locationOutline,
 		website: globeOutline,
+		main_areas: location,
+		attractions: informationCircle,
+		beaches: sunnyOutline,
+		shopping: pricetags,
+		nightlife: moon,
+		events: informationCircle,
 	};
 	return iconMap[section];
 };
@@ -253,6 +269,12 @@ const getCardClass = (section: string) => {
 		points_of_interest: "card-green",
 		location: "card-purple",
 		website: "card-blue",
+		attractions: "card-green",
+		beaches: "card-orange",
+		shopping: "card-yellow",
+		nightlife: "card-purple",
+		main_areas: "card-red",
+		events: "card-blue-light",
 	};
 	return classMap[section];
 };
@@ -421,6 +443,21 @@ const isFavorite = (item: GridItem) => {
 .card-orange {
 	background: rgba(251, 146, 60, 0.1);
 	border: 1px solid rgba(251, 146, 60, 0.2);
+}
+
+.card-pink {
+	background: rgba(248, 113, 113, 0.1);
+	border: 1px solid rgba(248, 113, 113, 0.2);
+}
+
+.card-red {
+	background: rgba(239, 68, 68, 0.1);
+	border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.card-blue-light {
+	background: rgba(59, 130, 246, 0.05);
+	border: 1px solid rgba(59, 130, 246, 0.1);
 }
 
 /* Hover Effects */

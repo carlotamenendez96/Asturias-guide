@@ -52,7 +52,7 @@ export const beaches: GridItem[] = [
 	},
 	{
 		title: "Beaches.playa-de-la-ballota.title",
-		image: "https://imgur.com/x1Vyy0D.jpeg",
+		image: "https://i.imgur.com/IhpLELG.jpeg",
 		route: "/beaches/playa-de-la-ballota",
 		sections: ["parking", "access", "services", "tips"],
 		location: {
